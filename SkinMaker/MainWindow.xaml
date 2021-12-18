@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkinMaker"
         mc:Ignorable="d"
-        Title="Skin Maker" Height="720" Width="1280" FontSize="20">
+        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black">
     <Grid>
-        <Button x:Name="NewSkin" Content="Button" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click"/>
-        <Button x:Name="OpenSkin" Content="Button" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250"/>
-        <Button x:Name="Options" Content="Button" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
-        <Button x:Name="Exit" Content="Button" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
+        <Button x:Name="NewSkin" Content="New Skin" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click" Background="#FF9E00AE" Foreground="#FF9B9B9B"/>
+        <Button x:Name="OpenSkin" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250"/>
+        <Button x:Name="Options" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
+        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
     </Grid>
 </Window>

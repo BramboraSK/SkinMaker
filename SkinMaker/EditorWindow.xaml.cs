@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SkinMaker
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interakční logika pro EditorWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EditorWindow : Window
     {
-        public MainWindow()
+        public EditorWindow()
         {
             InitializeComponent();
-        }
-
-        private void NewSkin_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
