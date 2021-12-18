@@ -7,13 +7,9 @@
         mc:Ignorable="d"
         Title="Skin Maker" Height="720" Width="1280" FontSize="20">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="Button_Click">
-            <UIElement.RenderTransform>
-                <MatrixTransform/>
-            </UIElement.RenderTransform>
-        </Button>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250"/>
+        <Button x:Name="NewSkin" Content="Button" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click"/>
+        <Button x:Name="OpenSkin" Content="Button" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250"/>
+        <Button x:Name="Options" Content="Button" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
+        <Button x:Name="Exit" Content="Button" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
     </Grid>
 </Window>
