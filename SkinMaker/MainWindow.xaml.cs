@@ -24,5 +24,10 @@ namespace SkinMaker
         {
             InitializeComponent();
         }
+
+        private void Tlačítko_1_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("cs");
+        }
     }
 }

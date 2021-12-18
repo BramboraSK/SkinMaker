@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "MzK8spwkxISdx4QAcbq5EopcJGfWTfHGn6dAUEbLwvnvX5Fb6Dl6OwG2wEgcXsS25Z1Nv69GZb7DERzwOxVRwQ==",
+  "dgSpecHash": "O+rio6Q41ouVFktp+kc6xOpViWwyfTUgvOb6HwXnGT/gt4iknCgK/6yw9C7yk1OCDAG/5udGh1ZSA0VSuYLozA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
+  "projectFilePath": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\majoj\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
-    "C:\\Users\\majoj\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+    "C:\\Users\\drevo\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\drevo\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

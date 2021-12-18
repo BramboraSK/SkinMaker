@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj": {}
+    "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj": {}
   },
   "projects": {
-    "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj": {
+    "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
+        "projectUniqueName": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
         "projectName": "SkinMaker",
-        "projectPath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
-        "packagesPath": "C:\\Users\\majoj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\obj\\",
+        "projectPath": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
+        "packagesPath": "C:\\Users\\drevo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\majoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\drevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
