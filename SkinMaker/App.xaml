@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:SkinMaker"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Aller">pack://application:,,,/Fonts/#Aller</FontFamily>
     </Application.Resources>
 </Application>

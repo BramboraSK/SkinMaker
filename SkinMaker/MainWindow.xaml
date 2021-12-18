@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SkinMaker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Cursor="">
+        <Label Content="JAK JEDE NE" HorizontalAlignment="Center" Margin="0,75,0,0" VerticalAlignment="Top" FontFamily="Aller" FontSize="72"/>
 
     </Grid>
 </Window>

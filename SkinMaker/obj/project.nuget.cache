@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5QWpE6jh/wYXUgeK88zyTSHjK4pekPI9hbYwdnBKQWkjQKO2lxqkeKRT1D8i1ZJiOnP2ejMwD0h0MGTtM+NrzA==",
+  "dgSpecHash": "MzK8spwkxISdx4QAcbq5EopcJGfWTfHGn6dAUEbLwvnvX5Fb6Dl6OwG2wEgcXsS25Z1Nv69GZb7DERzwOxVRwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\majoj\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\majoj\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
