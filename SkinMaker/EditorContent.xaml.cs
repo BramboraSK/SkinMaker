@@ -30,7 +30,7 @@ namespace SkinMaker
             InitializeComponent();
 
             Editing.Text = $"Editing: {skinName}";
-
+            editorControl.Content = new EditImagesContent(skinName);
         }
     }
 }
