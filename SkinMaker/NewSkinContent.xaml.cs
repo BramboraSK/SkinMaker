@@ -20,9 +20,51 @@ namespace SkinMaker
     /// </summary>
     public partial class NewSkinContent : UserControl
     {
-        public NewSkinContent()
+        MainWindow mw;
+
+        public class Skin
         {
+            public string name;
+            public string author;
+
+            public Skin(string name, string author)
+            {
+                this.name = name;
+                this.author = author;
+            }
+        }
+
+        public NewSkinContent(MainWindow recievedWindow)
+        {
+            mw = recievedWindow;
             InitializeComponent();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            mw.contentControl.Content = new MainContent(mw);
+        }
+
+        private void CreateSkin_Click(object sender, RoutedEventArgs e)
+        {    
+            if (SkinName.Text.Length > 0)
+            {
+                SkinCreate.CreateSkin(new Skin(SkinName.Text, SkinAuthor.Text));
+                mw.contentControl.Content = new EditorContent(mw, SkinName.Text);
+            }
+            else
+            {
+                SkinName.Background = Brushes.DarkRed;
+            }
+
+        }
+
+        private void SkinName_TextChanged(object sender, RoutedEventArgs e)
+        {
+            if (SkinName.Background == Brushes.DarkRed)
+            {
+                SkinName.Background = Brushes.Transparent;
+            }
         }
     }
 }

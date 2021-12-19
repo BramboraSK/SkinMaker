@@ -21,10 +21,15 @@ namespace SkinMaker
     public partial class EditorContent : UserControl
     {
         MainWindow mw;
-        public EditorContent(MainWindow recievedWindow)
+        string skinName;
+        public EditorContent(MainWindow recievedWindow, string skinName)
         {
+            this.skinName = skinName;
             mw = recievedWindow;
+
             InitializeComponent();
+
+            Editing.Text = $"Editing: {skinName}";
 
         }
     }

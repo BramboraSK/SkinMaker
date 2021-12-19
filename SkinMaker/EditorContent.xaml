@@ -8,6 +8,7 @@
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="570" Margin="200,150,0,0" VerticalAlignment="Top" Width="1080" Fill="#FF282828"/>
+        <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="964" Foreground="White"/>
 
     </Grid>
 </UserControl>
