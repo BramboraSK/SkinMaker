@@ -38,7 +38,8 @@ namespace SkinMaker
         {
             CommonOpenFileDialog dialog = new()
             {
-                IsFolderPicker = true
+                IsFolderPicker = true,
+                InitialDirectory = OptionsLoader.options.SkinsFolderPath
             };
 
             if(dialog.ShowDialog() == CommonFileDialogResult.Ok) mw.contentControl.Content = new EditorContent(mw, Path.GetFileName(dialog.FileName));
