@@ -18,13 +18,22 @@ namespace SkinMaker
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : CustomChromeLibrary.CustomChromeWindow
     {
         public MainWindow()
         {
             InitializeComponent();
-            this.Content = new MainContent();
+            contentControl.Content = new MainContent(this);
         }
 
+        private void Shutdown_MouseDown(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void Minimize_MouseDown(object sender, RoutedEventArgs e)
+        {
+            MainWindow.GetWindow(this).WindowState = WindowState.Minimized;
+        }
     }
 }

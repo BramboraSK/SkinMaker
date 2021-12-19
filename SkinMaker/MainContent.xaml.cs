@@ -20,13 +20,16 @@ namespace SkinMaker
     /// </summary>
     public partial class MainContent : UserControl
     {
-        public MainContent()
+        MainWindow mw;
+
+        public MainContent(MainWindow recievedWindow)
         {
+            mw = recievedWindow;
             InitializeComponent();
         }
         private void NewSkin_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
@@ -36,17 +39,7 @@ namespace SkinMaker
 
         private void Options_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = new OptionsContent();
-        }
-
-        private void Shutdown_MouseDown(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void Minimize_MouseDown(object sender, RoutedEventArgs e)
-        {
-            MainWindow.GetWindow(this).WindowState = WindowState.Minimized;
+            mw.contentControl.Content = new OptionsContent(mw);
         }
     }
 }

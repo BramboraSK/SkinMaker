@@ -14,7 +14,5 @@
         <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Exit_Click"/>
         <Image HorizontalAlignment="Left" Height="626" Margin="640,0,0,0" VerticalAlignment="Center" Width="630" Source="/XDMatej.png" Opacity="0.5"/>
         <Image HorizontalAlignment="Left" Height="95" Margin="100,107,0,0" VerticalAlignment="Top" Width="555" Source="/Title.png"/>
-        <Ellipse x:Name="Shutdown" HorizontalAlignment="Left" Height="15" Margin="1255,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFF605C" MouseLeftButtonDown="Shutdown_MouseDown"/>
-        <Ellipse x:Name="Minimize" HorizontalAlignment="Left" Height="15" Margin="1230,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFFBD44" MouseLeftButtonDown="Minimize_MouseDown"/>
     </Grid>
 </UserControl>

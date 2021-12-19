@@ -1,19 +1,18 @@
-﻿<Window x:Name="MainWindow1" x:Class="SkinMaker.MainWindow"
+﻿<ccl:CustomChromeWindow x:Name="MainWindow1" x:Class="SkinMaker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:shell="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
         xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
-        xmlns:local="clr-namespace:SkinMaker"
+		xmlns:local="clr-namespace:SkinMaker"
         Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize">
 
-    <shell:WindowChrome.WindowChrome>
-        <shell:WindowChrome
+    <WindowChrome.WindowChrome>
+        <WindowChrome
             ResizeBorderThickness="0"
-            CaptionHeight="10"       
+            CaptionHeight="43"
             CornerRadius="25,25,10,10"
             GlassFrameThickness="0">
-        </shell:WindowChrome>
-    </shell:WindowChrome.WindowChrome>
+        </WindowChrome>
+    </WindowChrome.WindowChrome>
 
     <Window.Resources>
         <ResourceDictionary>
@@ -22,6 +21,11 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-</Window>
-    
-    
+
+    <Grid>
+        <Ellipse x:Name="Shutdown" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1255,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFF605C" MouseLeftButtonDown="Shutdown_MouseDown"/>
+        <Ellipse x:Name="Minimize" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1230,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFFBD44" MouseLeftButtonDown="Minimize_MouseDown"/>
+        
+        <ContentControl x:Name="contentControl"/>
+    </Grid>
+</ccl:CustomChromeWindow>

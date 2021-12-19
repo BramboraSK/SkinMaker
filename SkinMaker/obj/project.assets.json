@@ -194,19 +194,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\drevo\\.nuget\\packages\\": {}
+    "C:\\Users\\majoj\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
+      "projectUniqueName": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
       "projectName": "SkinMaker",
-      "projectPath": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
-      "packagesPath": "C:\\Users\\drevo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\drevo\\source\\repos\\SkinMaker\\SkinMaker\\obj\\",
+      "projectPath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\SkinMaker.csproj",
+      "packagesPath": "C:\\Users\\majoj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\drevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\majoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -255,6 +255,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -263,7 +269,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -272,7 +278,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Balíček DotNetProjects.CustomChromeLibrary 1.0.3 se místo cílové verze rozhraní .NET Framework projektu net5.0-windows7.0 obnovil pomocí .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8. Balíček nemusí být plně kompatibilní s vaším projektem.",
+      "message": "Package 'DotNetProjects.CustomChromeLibrary 1.0.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "DotNetProjects.CustomChromeLibrary",
       "targetGraphs": [
         "net5.0-windows7.0"
@@ -282,7 +288,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Balíček WindowsAPICodePack-Core 1.1.1 se místo cílové verze rozhraní .NET Framework projektu net5.0-windows7.0 obnovil pomocí .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8. Balíček nemusí být plně kompatibilní s vaším projektem.",
+      "message": "Package 'WindowsAPICodePack-Core 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "WindowsAPICodePack-Core",
       "targetGraphs": [
         "net5.0-windows7.0"
@@ -292,7 +298,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Balíček WindowsAPICodePack-Shell 1.1.1 se místo cílové verze rozhraní .NET Framework projektu net5.0-windows7.0 obnovil pomocí .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8. Balíček nemusí být plně kompatibilní s vaším projektem.",
+      "message": "Package 'WindowsAPICodePack-Shell 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
       "libraryId": "WindowsAPICodePack-Shell",
       "targetGraphs": [
         "net5.0-windows7.0"

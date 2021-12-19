@@ -23,36 +23,27 @@ namespace SkinMaker
     /// </summary>
     public partial class OptionsContent : UserControl
     {
-        public OptionsContent()
+        MainWindow mw;
+
+        public OptionsContent(MainWindow recievedWindow)
         {
+            mw = recievedWindow;
             InitializeComponent();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            this.Content = new MainContent();
-        }
-
-        private void Shutdown_MouseDown(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void Minimize_MouseDown(object sender, RoutedEventArgs e)
-        {
-            MainWindow.GetWindow(this).WindowState = WindowState.Minimized;
+            mw.contentControl.Content = new MainContent(mw);
         }
 
         private void BrowseSkinsFolder_Click(object sender, RoutedEventArgs e)
         {
-            var dialog = new CommonOpenFileDialog();
-            dialog.IsFolderPicker = true;
-            CommonFileDialogResult result = dialog.ShowDialog();
-            if (result == CommonFileDialogResult.Ok)
+            CommonOpenFileDialog dialog = new()
             {
-                SkinsFolderPath.Text = dialog.FileName;
-            }
+                IsFolderPicker = true
+            };
 
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
         }
     }
 }
