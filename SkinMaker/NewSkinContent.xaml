@@ -13,6 +13,8 @@
         <TextBox x:Name="SkinAuthor" HorizontalAlignment="Left" Margin="100,257,0,0" Text="osuxxxgamer" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Foreground="White"><Run Text="Skin name:"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="100,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Foreground="White"><Run Text="Author:"/></TextBlock>
-
+        <Button x:Name="ChooseSkinTemplateButton" Content="Empty" HorizontalAlignment="Left" Margin="350,360,0,0" VerticalAlignment="Top" Height="60" Width="250" Click="ChooseSkinTemplateButton_Click"/>
+        <Label Content="Choose skin template:" HorizontalAlignment="Left" Margin="100,360,0,0" VerticalAlignment="Top" Height="60" Width="225" VerticalContentAlignment="Center" Foreground="White"/>
+        <ListBox x:Name="TemplateList" d:ItemsSource="{d:SampleData ItemCount=5}" Visibility="Hidden" Margin="640,360,390,300" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5"/>
     </Grid>
 </UserControl>

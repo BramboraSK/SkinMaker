@@ -66,5 +66,10 @@ namespace SkinMaker
                 SkinName.Background = Brushes.Transparent;
             }
         }
+
+        private void ChooseSkinTemplateButton_Click(object sender, RoutedEventArgs e)
+        {
+            TemplateList.Visibility = Visibility.Visible;
+        }
     }
 }
