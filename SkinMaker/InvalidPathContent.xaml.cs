@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,26 +16,16 @@ using System.Windows.Shapes;
 namespace SkinMaker
 {
     /// <summary>
-    /// Interakční logika pro MainContent.xaml
+    /// Interaction logic for InvalidPathControl.xaml
     /// </summary>
-    public partial class MainContent : UserControl
+    public partial class InvalidPathContent : UserControl
     {
         MainWindow mw;
 
-        public MainContent(MainWindow recievedWindow)
+        public InvalidPathContent(MainWindow recievedWindow)
         {
             mw = recievedWindow;
             InitializeComponent();
-        }
-
-        private void NewSkin_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            Environment.Exit(0);
         }
 
         private void Options_Click(object sender, RoutedEventArgs e)

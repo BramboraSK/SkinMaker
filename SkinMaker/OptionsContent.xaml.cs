@@ -34,7 +34,14 @@ namespace SkinMaker
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            mw.contentControl.Content = new MainContent(mw);
+            if (Directory.Exists(OptionsLoader.options.SkinsFolderPath))
+            {
+                mw.contentControl.Content = new MainContent(mw);
+            }
+            else
+            {
+                mw.contentControl.Content = new InvalidPathContent(mw);
+            }
         }
 
         private void BrowseSkinsFolder_Click(object sender, RoutedEventArgs e)
