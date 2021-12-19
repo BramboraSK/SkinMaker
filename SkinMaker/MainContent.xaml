@@ -9,7 +9,7 @@
 
     <Grid>
         <Button x:Name="NewSkin" Content="New Skin" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click" />
-        <Button x:Name="OpenSkin" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250" />
+        <Button x:Name="OpenSkin" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250" Click="OpenSkin_Click" />
         <Button x:Name="Options" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
         <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Exit_Click"/>
         <Image HorizontalAlignment="Left" Height="626" Margin="640,0,0,0" VerticalAlignment="Center" Width="630" Source="/XDMatej.png" Opacity="0.5"/>

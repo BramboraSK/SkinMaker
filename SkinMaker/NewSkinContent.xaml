@@ -7,12 +7,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid>
-        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="990,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="Back_Click"/>
-        <Button x:Name="CreateSkin" Content="Create skin!" HorizontalAlignment="Left" Margin="100,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="CreateSkin_Click"/>
         <TextBox x:Name="SkinName" HorizontalAlignment="Left" Margin="100,150,0,0" Text="My Skin" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" TextChanged="SkinName_TextChanged"/>
-        <TextBox x:Name="SkinAuthor" HorizontalAlignment="Left" Margin="100,257,0,0" Text="osuxxxgamer" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Foreground="White"><Run Text="Skin name:"/></TextBlock>
+        <TextBox x:Name="SkinAuthor" HorizontalAlignment="Left" Margin="100,257,0,0" Text="osuxxxgamer" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center"/>
         <TextBlock HorizontalAlignment="Left" Margin="100,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" Foreground="White"><Run Text="Author:"/></TextBlock>
-
+        <Button x:Name="CreateSkin" Content="Create skin!" HorizontalAlignment="Left" Margin="100,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="CreateSkin_Click"/>
+        <Button x:Name="Back" Content="Back" HorizontalAlignment="Left" Margin="990,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="Back_Click"/>
     </Grid>
 </UserControl>

@@ -51,7 +51,7 @@ namespace SkinMaker
                 IsFolderPicker = true
             };
 
-            if (dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
+            if(dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
