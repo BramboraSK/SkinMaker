@@ -26,6 +26,8 @@ namespace SkinMaker
         {
             mw = recievedWindow;
             InitializeComponent();
+            InitCheck initObj = new InitCheck();
+            initObj.Init();
         }
         private void NewSkin_Click(object sender, RoutedEventArgs e)
         {
