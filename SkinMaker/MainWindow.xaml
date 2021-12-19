@@ -9,7 +9,7 @@
         <WindowChrome
             ResizeBorderThickness="0"
             CaptionHeight="43"
-            CornerRadius="25,25,10,10"
+            CornerRadius="10,10,10,10"
             GlassFrameThickness="0">
         </WindowChrome>
     </WindowChrome.WindowChrome>
