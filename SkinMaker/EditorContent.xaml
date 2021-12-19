@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="SkinMaker.EditorContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SkinMaker"
+             mc:Ignorable="d" 
+             d:DesignHeight="720" d:DesignWidth="1280">
+    <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="570" Margin="200,150,0,0" VerticalAlignment="Top" Width="1080" Fill="#FF282828"/>
+
+    </Grid>
+</UserControl>

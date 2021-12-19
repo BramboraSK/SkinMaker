@@ -31,7 +31,7 @@ namespace SkinMaker
         }
         private void NewSkin_Click(object sender, RoutedEventArgs e)
         {
-            
+            mw.contentControl.Content = new EditorContent(mw);
         }
 
         private void Exit_Click(object sender, RoutedEventArgs e)
