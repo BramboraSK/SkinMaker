@@ -4,7 +4,7 @@
         xmlns:shell="http://schemas.microsoft.com/netfx/2009/xaml/presentation"
         xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
         xmlns:local="clr-namespace:SkinMaker"
-        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize">
+        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize" FontWeight="Bold">
 
     <shell:WindowChrome.WindowChrome>
         <shell:WindowChrome
