@@ -24,6 +24,7 @@ namespace SkinMaker
         {
             InitializeComponent();
             contentControl.Content = new MainContent(this);
+            
         }
 
         private void Shutdown_MouseDown(object sender, RoutedEventArgs e)
