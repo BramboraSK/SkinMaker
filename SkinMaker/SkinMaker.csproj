@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Fonts\Aller_Std_Bd.ttf" />
     <None Remove="Title.png" />
     <None Remove="XDMatej.png" />
   </ItemGroup>
@@ -28,9 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Fonts\Aller_Std_Bd.ttf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Title.png" />
     <Resource Include="XDMatej.png" />
   </ItemGroup>

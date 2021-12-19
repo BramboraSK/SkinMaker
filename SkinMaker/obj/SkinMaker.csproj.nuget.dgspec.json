@@ -13,8 +13,14 @@
         "packagesPath": "C:\\Users\\majoj\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\majoj\\Documents\\GitHub\\SkinMaker\\SkinMaker\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\majoj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+
+          "C:\\Users\\drevo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
