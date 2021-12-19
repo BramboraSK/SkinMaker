@@ -13,6 +13,9 @@
     <Compile Update="MainContent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="NewSkinContent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="OptionsContent.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -28,6 +31,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NewSkinContent.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="OptionsContent.xaml">
