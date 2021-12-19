@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.IO;
 
 namespace SkinMaker
 {
@@ -38,6 +38,7 @@ namespace SkinMaker
         {
             mw = recievedWindow;
             InitializeComponent();
+            LoadTemplates();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -49,7 +50,7 @@ namespace SkinMaker
         {    
             if (SkinName.Text.Length > 0)
             {
-                SkinCreate.CreateSkin(new Skin(SkinName.Text, SkinAuthor.Text));
+                SkinCreate.CreateSkin(new Skin(SkinName.Text, SkinAuthor.Text), ChooseSkinTemplateButton.Content.ToString());
                 mw.contentControl.Content = new EditorContent(mw, SkinName.Text);
             }
             else
@@ -69,7 +70,27 @@ namespace SkinMaker
 
         private void ChooseSkinTemplateButton_Click(object sender, RoutedEventArgs e)
         {
+            ChooseSkinTemplateButton.Visibility = Visibility.Hidden;
             TemplateList.Visibility = Visibility.Visible;
+        }
+
+        private void LoadTemplates()
+        {
+            string[] skins = Directory.GetDirectories(OptionsLoader.options.SkinsFolderPath);
+
+            TemplateList.Items.Add("(Empty)");
+
+            foreach (string skin in skins)
+            {
+                TemplateList.Items.Add(Path.GetFileName(skin));
+            }
+        }
+
+        private void SelectTemplate(object sender, RoutedEventArgs e)
+        {
+            ChooseSkinTemplateButton.Content = TemplateList.SelectedItem;
+            ChooseSkinTemplateButton.Visibility = Visibility.Visible;
+            TemplateList.Visibility = Visibility.Hidden;
         }
     }
 }
