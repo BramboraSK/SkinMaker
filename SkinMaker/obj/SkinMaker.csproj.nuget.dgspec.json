@@ -40,9 +40,17 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "DotNetProjects.CustomChromeLibrary": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "System.Drawing.Common": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.1, )"
             }
           },
           "imports": [
