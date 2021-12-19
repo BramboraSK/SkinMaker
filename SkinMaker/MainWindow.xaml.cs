@@ -23,11 +23,8 @@ namespace SkinMaker
         public MainWindow()
         {
             InitializeComponent();
+            this.Content = new MainContent();
         }
 
-        private void NewSkin_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

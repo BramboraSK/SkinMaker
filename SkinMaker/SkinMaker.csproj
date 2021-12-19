@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <None Remove="Fonts\Aller_Std_Bd.ttf" />
+    <None Remove="Title.png" />
+    <None Remove="XDMatej.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,13 +22,23 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DotNetProjects.CustomChromeLibrary" Version="1.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Fonts\Aller_Std_Bd.ttf">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Title.png" />
+    <Resource Include="XDMatej.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Stuff.txt">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
 </Project>

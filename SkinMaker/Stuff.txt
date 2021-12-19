@@ -1,0 +1,10 @@
+﻿
+// Dalibor
+	
+	Grey hex: #FF2C2C2C
+	Purple hex: #FF9E00AE
+
+
+// Majo
+
+	
