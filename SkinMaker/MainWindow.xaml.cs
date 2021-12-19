@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,8 +24,16 @@ namespace SkinMaker
         public MainWindow()
         {
             InitializeComponent();
-            contentControl.Content = new MainContent(this);
-            
+            new OptionsLoader().Init();
+
+            if(Directory.Exists(OptionsLoader.options.SkinsFolderPath))
+            {
+                contentControl.Content = new MainContent(this);
+            }
+            else
+            {
+                contentControl.Content = new InvalidPathContent(this);
+            }
         }
 
         private void Shutdown_MouseDown(object sender, RoutedEventArgs e)
