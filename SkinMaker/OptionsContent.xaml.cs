@@ -29,6 +29,7 @@ namespace SkinMaker
         {
             mw = recievedWindow;
             InitializeComponent();
+            SkinsFolderPath.Text = OptionsLoader.options.SkinsFolderPath;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -44,6 +45,12 @@ namespace SkinMaker
             };
 
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
+            OptionsLoader.Save();
         }
     }
 }
