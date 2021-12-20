@@ -37,7 +37,7 @@
     <None Update="Fonts\Aller_Bd.ttf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="MenuContent.json">
+    <None Update="ImageContent.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Stuff.txt">
