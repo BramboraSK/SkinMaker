@@ -53,7 +53,7 @@ namespace SkinMaker
             config.AllowDuplicateSections = true;
             config.AllowDuplicateKeys = true;
 
-            if (template == "(Empty)")
+            if (template == "(Empty)" || !File.Exists($@"{OptionsLoader.options.SkinsFolderPath}\{template}\skin.ini"))
             {
                 IniData data = parser.Parse(File.ReadAllText(@"Templates\skin.ini"));
 
