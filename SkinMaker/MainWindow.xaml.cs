@@ -24,6 +24,7 @@ namespace SkinMaker
         public MainWindow()
         {
             InitializeComponent();
+            CenterWindowOnScreen();
             new OptionsLoader().Init();
 
             if(Directory.Exists(OptionsLoader.options.SkinsFolderPath))
@@ -44,6 +45,16 @@ namespace SkinMaker
         private void Minimize_MouseDown(object sender, RoutedEventArgs e)
         {
             MainWindow.GetWindow(this).WindowState = WindowState.Minimized;
+        }
+        private void CenterWindowOnScreen()
+        {
+            double screenWidth = SystemParameters.PrimaryScreenWidth;
+            double screenHeight = SystemParameters.PrimaryScreenHeight;
+            double windowWidth = Width;
+            double windowHeight = Height;
+
+            Left = (screenWidth / 2) - (windowWidth / 2);
+            Top = (screenHeight / 2) - (windowHeight / 2);
         }
     }
 }
