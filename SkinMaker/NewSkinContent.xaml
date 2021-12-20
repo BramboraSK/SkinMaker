@@ -16,5 +16,6 @@
         <Button x:Name="ChooseSkinTemplateButton" Visibility="Visible" Content="(Empty)" HorizontalAlignment="Left" Margin="350,360,0,0" VerticalAlignment="Top" Height="60" Width="250" Click="ChooseSkinTemplateButton_Click"/>
         <Label Content="Choose skin template:" HorizontalAlignment="Left" Margin="100,360,0,0" VerticalAlignment="Top" Height="60" Width="225" VerticalContentAlignment="Center" Foreground="White"/>
         <ListBox x:Name="TemplateList" Visibility="Hidden" Margin="350,360,314,50" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" SelectionChanged="SelectTemplate"/>
+        <Label x:Name="SkinAlreadyExists" Content="This skin already exists!" Visibility="Hidden" HorizontalAlignment="Left" Margin="617,150,0,0" VerticalAlignment="Top" Height="60" Width="382" Foreground="White" VerticalContentAlignment="Center"/>
     </Grid>
 </UserControl>

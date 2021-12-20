@@ -9,7 +9,21 @@
 
     <Grid>
         <ListBox x:Name="ImageList" Background="{x:Null}" Foreground="White" Margin="0,0,540,0" SelectionChanged="ImageList_SelectionChanged"/>
-        <Image x:Name="Preview" HorizontalAlignment="Left" Height="270" Margin="675,62,0,0" VerticalAlignment="Top" Width="270"/>
+        <Border BorderThickness="2" Margin="600,60,296,326" BorderBrush="#FF121212" Background="#FF282828">
+            <Image x:Name="Preview" HorizontalAlignment="Left" Height="180" Margin="0,0,0,0" VerticalAlignment="Top" Width="180" Stretch="Uniform"/>
+        </Border>
+        <Label x:Name="PreviewWidth" Content="" HorizontalAlignment="Left" Margin="600,23,0,0" VerticalAlignment="Top" Width="184" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="PreviewHeight" Content="" HorizontalAlignment="Left" Margin="489,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="180" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="EditButon" Content="Edit!" HorizontalAlignment="Left" Margin="888,487,0,0" VerticalAlignment="Top" Height="46" Width="149" Click="EditButon_Click"/>
     </Grid>
 
 </UserControl>

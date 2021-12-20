@@ -13,22 +13,34 @@ namespace SkinMaker
 {
     public class SkinCreate
     {
-        public static void CreateSkin(Skin skin, string template)
-        {  
-            if (template == "(Empty)")
+        public static bool CreateSkin(Skin skin, string template)
+        {
+            if (!CheckSkinExists(skin))
             {
-                Directory.CreateDirectory($@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
-                CreateIniFile(skin, template);
+                if (template == "(Empty)")
+                {
+                    Directory.CreateDirectory($@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
+                    CreateIniFile(skin, template);
+                }
+                else
+                {
+                    Directory.CreateDirectory($@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
+                    CopyFromTemplate($@"{OptionsLoader.options.SkinsFolderPath}\{template}", $@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
+                    CreateIniFile(skin, template);
+                }
+                return true;
             }
             else
             {
-                Directory.CreateDirectory($@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
-                CopyFromTemplate($@"{OptionsLoader.options.SkinsFolderPath}\{template}", $@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
-                CreateIniFile(skin, template);
+                return false;
             }
-
         }
         
+        private static bool CheckSkinExists(Skin skin)
+        {
+            return Directory.Exists($@"{OptionsLoader.options.SkinsFolderPath}\{skin.name}");
+        }
+
         private static void CreateIniFile(Skin skin, string template)
         {
             var parser = new IniDataParser();

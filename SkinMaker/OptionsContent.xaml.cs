@@ -30,6 +30,7 @@ namespace SkinMaker
             mw = recievedWindow;
             InitializeComponent();
             SkinsFolderPath.Text = OptionsLoader.options.SkinsFolderPath;
+            ImageEditorPath.Text = OptionsLoader.options.ImageEditorPath;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -57,7 +58,18 @@ namespace SkinMaker
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
+            OptionsLoader.options.ImageEditorPath = ImageEditorPath.Text;
             OptionsLoader.Save();
+        }
+
+        private void BrowseImageEditorPath_Click(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog dialog = new()
+            {
+                
+            };
+
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok) ImageEditorPath.Text = dialog.FileName;
         }
     }
 }
