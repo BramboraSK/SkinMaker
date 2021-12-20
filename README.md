@@ -2,11 +2,11 @@
  
 ## About
 
-Skin Maker is a simple tool that aims to help people who create skins for osu!. It (will) provides tools that can help you organize, create and edit specific files in skin. Our main goal is to save skinners' time and make editing files (such as skin.ini) more user friendly.
+Skin Maker is a simple tool that aims to help people who create osu! skins. It provides tools (well, not yet) that can help you organize, create and edit specific files in skin. Our main goal is to save skinners' time and make editing files (such as skin.ini) more user friendly.
 
 ## How to use
 
-Skin Maker is currently in a very early state of development and the only feature it currently has is opening .png/.jpg files with selected application (Photoshop, GIMP, ...). We are working hard to add bunch of new epic features!
+Skin Maker is currently in a very early stage of development and the only feature it currently has is opening .png/.jpg files with selected application (Photoshop, GIMP, ...). We are working hard to add bunch of new epic features!
 
 ## Join us
 
