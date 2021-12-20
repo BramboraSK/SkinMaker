@@ -42,7 +42,17 @@ namespace SkinMaker
                 InitialDirectory = OptionsLoader.options.SkinsFolderPath
             };
 
-            if(dialog.ShowDialog() == CommonFileDialogResult.Ok) mw.contentControl.Content = new EditorContent(mw, Path.GetFileName(dialog.FileName));
+            if(dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                if(dialog.FileName.StartsWith(OptionsLoader.options.SkinsFolderPath))
+                {
+                    mw.contentControl.Content = new EditorContent(mw, Path.GetFileName(dialog.FileName));
+                }
+                else
+                {
+                    MessageBox.Show("The skin must be in the Skins folder!", "Skin Maker", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
     }
 }

@@ -45,7 +45,10 @@ namespace SkinMaker
                 if (filename.Contains("@2x"))
                 {
                     System.Drawing.Image img = System.Drawing.Image.FromFile(filename);
-                    new Bitmap(new Bitmap(img), new System.Drawing.Size(img.Width / 2, img.Height / 2)).Save(filename.Replace("@2x", ""), filename.EndsWith(".png") ? ImageFormat.Png : ImageFormat.Jpeg);
+                    Bitmap bm = new(new Bitmap(img), new System.Drawing.Size(img.Width > 1 ? img.Width / 2 : 1, img.Height > 1 ? img.Height / 2 : 1));
+                    img.Dispose();
+
+                    bm.Save(filename.Replace("@2x", ""), filename.EndsWith(".png") ? ImageFormat.Png : ImageFormat.Jpeg);
                 }
             }
 
