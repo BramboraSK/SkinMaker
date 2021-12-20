@@ -31,7 +31,13 @@ namespace SkinMaker
             string imgSource = Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString());
             string[] imgDim = EditImages.GetImageDim(imgSource);
 
-            Preview.Source = new BitmapImage(new Uri(imgSource));
+            BitmapImage bmi = new();
+            bmi.BeginInit();
+            bmi.CacheOption = BitmapCacheOption.OnLoad;
+            bmi.UriSource = new Uri(imgSource);
+            bmi.EndInit();
+
+            Preview.Source = bmi;
 
             PreviewWidth.Content = imgDim[0];
             PreviewHeight.Content = imgDim[1];

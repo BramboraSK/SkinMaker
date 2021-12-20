@@ -11,8 +11,9 @@ namespace SkinMaker
     {
         public static string[] GetImageDim(string path)
         {
-            Image img = Image.FromFile(path);
-            string[] dim = { img.Width.ToString(), img.Height.ToString()};
+            using Bitmap img = new(path);
+            string[] dim = { img.Width.ToString(), img.Height.ToString() };
+            img.Dispose();
             return dim;
         }
     }
