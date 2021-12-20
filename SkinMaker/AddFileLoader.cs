@@ -19,13 +19,16 @@ namespace SkinMaker
         }
         public class MenuContentFile
         {
-            public OsuStdFilesContent[] OsuStdFiles { get; set; }
+            public List<OsuStdFilesContent> OsuStdFiles { get; set; }
         }
 
         private static readonly string menuContentFilename = "ImageContent.json";
 
         public static MenuContentFile content = JsonSerializer.Deserialize<MenuContentFile>(File.ReadAllText(menuContentFilename));
 
-
+        public static string GetFileDesc(string file)
+        {
+           return content.OsuStdFiles.Find(e => e.Name == file).Desc;
+        }
     }
 }

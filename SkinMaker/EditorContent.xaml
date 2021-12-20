@@ -20,9 +20,17 @@
         <Menu Margin="200,120,990,0" Background="#FF282828" Foreground="White" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" VerticalAlignment="Top">
             <MenuItem Header="Add File" Foreground="White" Width="86">
                 <MenuItem Margin="0,0,0,0" Foreground="Black" Header="osu!std" Name="OsuStdMenu">
-                    <ListBox Margin="-40,0,-50,0" Name="osuStdListbox" MaxHeight="300" Width="400"/>
+                    <ListBox Margin="-40,0,-50,0" IsVisibleChanged="osuStdListbox_IsVisibleChanged" Name="osuStdListbox" MaxHeight="300" Width="400"/>
                 </MenuItem>
             </MenuItem>
         </Menu>
+        <StackPanel Margin="740,246,140,360">
+            <Canvas>
+                <Popup Name="MenuDescPopup" PlacementTarget="{Binding ElementName=osuStdListbox}" VerticalOffset="-3" HorizontalOffset="10" Placement="Left" Width="400" Height="306">
+                    <TextBox Name="DescBox" Width="400" Height="306" TextWrapping="Wrap" MaxWidth="400" Visibility="Visible" Background="White"/>
+                </Popup>
+            </Canvas>
+        </StackPanel>
+
     </Grid>
 </UserControl>
