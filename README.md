@@ -2,7 +2,7 @@
  
 ## About
 
-Skin Maker is a simple tool made in C# using WPF that aims to help people create osu! skins. It provides tools (well, not yet) that can help you organize, create and edit specific files in skin. Our main goal is to save skinners' time and make editing files (such as skin.ini) more user friendly.
+Skin Maker is a simple tool made in C# using WPF that aims to help people create [osu!](https://osu.ppy.sh/home) skins. It provides tools (well, not yet) that can help you organize, create and edit specific files in skin. Our main goal is to save skinners' time and make editing files (such as skin.ini) more user friendly.
 
 ## How to use
 
