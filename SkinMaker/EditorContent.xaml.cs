@@ -65,10 +65,25 @@ namespace SkinMaker
 
         private void FillOsuStdListbox()
         {
+            ListBoxItem item = null;
             foreach (AddFileLoader.OsuStdFilesContent file in AddFileLoader.content.OsuStdFiles)
             {
-                osuStdListbox.Items.Add(file.Name);
+                item = new ListBoxItem();
+                item.Content = file.Name;
+                item.MouseEnter += new MouseEventHandler(item_MouseEnter);
+                osuStdListbox.Items.Add(item);
             }
+        }
+         
+        private void item_MouseEnter(object sender, MouseEventArgs e)
+        {
+            DescBox.Text = AddFileLoader.GetFileDesc(((ListBoxItem)sender).Content.ToString());
+            MenuDescPopup.IsOpen = true;
+        }
+
+        private void osuStdListbox_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            MenuDescPopup.IsOpen = false;
         }
     }
 
