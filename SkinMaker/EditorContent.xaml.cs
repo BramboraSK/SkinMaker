@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Drawing;
 using System.Drawing.Imaging;
+using Microsoft.VisualBasic.FileIO;
 
 namespace SkinMaker
 {
@@ -72,6 +73,19 @@ namespace SkinMaker
             {
                 osuStdListbox.Items.Add(file.Name);
             }
+        }
+
+        private void Remove2x_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (string filename in Directory.EnumerateFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)))
+            {
+                if (filename.Contains("@2x"))
+                {
+                    FileSystem.DeleteFile(filename, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
+                }
+            }
+
+            editorControl.Content = new EditImagesContent(skinName);
         }
     }
 
