@@ -16,28 +16,10 @@
         <ContentControl x:Name="editorControl" Margin="200,150,0,0"/>
         <Button x:Name="Convert2x" Content="Convert @2x to low res" HorizontalAlignment="Left" Margin="1030,90,0,0" VerticalAlignment="Top" Height="50" Width="240" Click="Convert2x_Click"/>
         <Button x:Name="BackToMenu" Content="Back" HorizontalAlignment="Left" Margin="42,648,0,0" VerticalAlignment="Top" Height="41" Width="100" Click="BackToMenu_Click"/>
-        <ComboBox x:Name="AddFile" HorizontalAlignment="Left" Margin="22,249,0,0" VerticalAlignment="Top" Width="120" Background="Black" BorderBrush="Black" SelectedIndex="0">
-            <ComboBoxItem Content="Add File"/>
-            <ComboBoxItem>
-                <ComboBox x:Name="osuComboBox">
-                    <ComboBoxItem Content="cursor.png"/>
-                </ComboBox>
-            </ComboBoxItem>
-            <ToolBar Height="100" Width="100"/>
-        </ComboBox>
-        <Menu Margin="200,125,1010,0" Background="{x:Null}" Foreground="White" BorderBrush="Black" FontFamily="Aller" FontSize="15" VerticalAlignment="Top">
-            <MenuItem Header="Add File" Foreground="Black" Width="70">
-                <MenuItem Header="osu!std" Name="OsuStdMenu">
-                    <MenuItem.ItemsSource>
-                        <CompositeCollection>
-                            <CollectionContainer Collection="{Binding Source={StaticResource osuMenuItems}}"/>
-                        </CompositeCollection>
-                    </MenuItem.ItemsSource>
-                    <MenuItem.ItemContainerStyle>
-                        <Style>
-                            <Setter Property="MenuItem.Header" Value="{Binding Title}"/>
-                        </Style>
-                    </MenuItem.ItemContainerStyle>
+        <Menu Margin="200,120,990,0" Background="#FF282828" Foreground="White" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" VerticalAlignment="Top">
+            <MenuItem Header="Add File" Foreground="White" Width="86">
+                <MenuItem Margin="0,0,0,0" Foreground="Black" Header="osu!std" Name="OsuStdMenu">
+                    <ListBox Margin="-40,0,-50,0" Name="osuStdListbox" MaxHeight="300" Width="400"/>
                 </MenuItem>
             </MenuItem>
         </Menu>

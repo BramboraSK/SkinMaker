@@ -8,7 +8,7 @@
              d:DesignHeight="570" d:DesignWidth="1080">
 
     <Grid>
-        <ListBox x:Name="ImageList" Background="{x:Null}" Foreground="White" Margin="0,0,540,0" SelectionChanged="ImageList_SelectionChanged"/>
+        <ListBox x:Name="ImageList" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" Foreground="White" Margin="0,0,540,0" SelectionChanged="ImageList_SelectionChanged"/>
         <Border BorderThickness="2" Margin="600,60,296,326" BorderBrush="#FF121212" Background="#FF282828">
             <Image x:Name="Preview" HorizontalAlignment="Left" Height="180" Margin="0,0,0,0" VerticalAlignment="Top" Width="180" Stretch="Uniform"/>
         </Border>

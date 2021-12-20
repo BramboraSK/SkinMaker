@@ -10,19 +10,21 @@ namespace SkinMaker
 {
     public class AddFileLoader
     {
+        public class OsuStdFilesContent
+        {
+            public string Name { get; set; }
+            public int DefWidth { get; set; }
+            public int DefHeight { get; set; }
+            public string Desc { get; set; }
+        }
         public class MenuContentFile
         {
-            public string[] OsuStdFiles { get; set; }
+            public OsuStdFilesContent[] OsuStdFiles { get; set; }
         }
 
-        private static readonly string menuContentFilename = "MenuContent.json";
-        public static MenuContentFile content;
+        private static readonly string menuContentFilename = "ImageContent.json";
 
-        public static void LoadMenuContentFile()
-        {
-            content = JsonSerializer.Deserialize<MenuContentFile>(File.ReadAllText(menuContentFilename));
-        }
-
+        public static MenuContentFile content = JsonSerializer.Deserialize<MenuContentFile>(File.ReadAllText(menuContentFilename));
 
 
     }

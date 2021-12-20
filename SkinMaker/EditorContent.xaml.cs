@@ -32,7 +32,7 @@ namespace SkinMaker
             mw = recievedWindow;
 
             InitializeComponent();
-            FillOsuStdContentMenu();
+            FillOsuStdListbox();
 
             Editing.Text = $"Editing: {skinName}";
             editorControl.Content = new EditImagesContent(skinName);
@@ -40,9 +40,9 @@ namespace SkinMaker
 
         private void Convert2x_Click(object sender, RoutedEventArgs e)
         {
-            foreach(string filename in Directory.EnumerateFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)))
+            foreach (string filename in Directory.EnumerateFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)))
             {
-                if(filename.Contains("@2x"))
+                if (filename.Contains("@2x"))
                 {
                     System.Drawing.Image img = System.Drawing.Image.FromFile(filename);
                     new Bitmap(new Bitmap(img), new System.Drawing.Size(img.Width / 2, img.Height / 2)).Save(filename.Replace("@2x", ""), filename.EndsWith(".png") ? ImageFormat.Png : ImageFormat.Jpeg);
@@ -50,7 +50,8 @@ namespace SkinMaker
             }
 
             editorControl.Content = new EditImagesContent(skinName);
-            
+        }
+
         public ObservableCollection<OsuStdMenuContent> OsuStdContent
         {
             get { return _osuStdContent; }
@@ -62,13 +63,11 @@ namespace SkinMaker
             mw.contentControl.Content = new MainContent(mw);
         }
 
-        private void FillOsuStdContentMenu()
+        private void FillOsuStdListbox()
         {
-            AddFileLoader.LoadMenuContentFile();
-
-            foreach (string file in AddFileLoader.content.OsuStdFiles)
+            foreach (AddFileLoader.OsuStdFilesContent file in AddFileLoader.content.OsuStdFiles)
             {
-                OsuStdContent.Add(new OsuStdMenuContent { Title = $"{file}.png" });
+                osuStdListbox.Items.Add(file.Name);
             }
         }
     }

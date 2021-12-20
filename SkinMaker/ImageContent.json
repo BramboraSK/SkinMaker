@@ -1,0 +1,332 @@
+{
+  "OsuStdFiles": [
+    { 
+      "Name": "default-0",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    { 
+      "Name": "default-1",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-2",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-3",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-4",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-5",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-6",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-7",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-8",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "default-9",
+      "DefWidth": 64,
+      "DefHeight": 64,
+      "Desc": ""
+    },
+
+    {
+      "Name": "approachcircle",
+      "DefWidth": 252,
+      "DefHeight": 252,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hitcircle",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hitcircleoverlay(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "followpoint(-n)",
+      "DefWidth": 120,
+      "DefHeight": 10,
+      "Desc": ""
+    },
+
+    {
+      "Name": "reversearrow",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderstartcircle",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+    
+    {
+      "Name": "sliderstartcircleoverlay(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderendcircle",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderendcircleoverlay(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderfollowcircle(-n)",
+      "DefWidth": 512,
+      "DefHeight": 512,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderb(n)",
+      "DefWidth": 236,
+      "DefHeight": 236,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderb-nd",
+      "DefWidth": 236,
+      "DefHeight": 236,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderb-spec",
+      "DefWidth": 236,
+      "DefHeight": 236,
+      "Desc": ""
+    },
+
+    {
+      "Name": "sliderscorepoint",
+      "DefWidth": 32,
+      "DefHeight": 32,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-background",
+      "DefWidth": 2048,
+      "DefHeight": 1404,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-circle",
+      "DefWidth": 727,
+      "DefHeight": 727,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-metre",
+      "DefWidth": 2048,
+      "DefHeight": 1384,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-bottom",
+      "DefWidth": 727,
+      "DefHeight": 727,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-glow",
+      "DefWidth": 2048,
+      "DefHeight": 1384,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-middle",
+      "DefWidth": 727,
+      "DefHeight": 727,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-middle2",
+      "DefWidth": 727,
+      "DefHeight": 727,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-top",
+      "DefWidth": 727,
+      "DefHeight": 727,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-approachcircle",
+      "DefWidth": 768,
+      "DefHeight": 768,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-rpm",
+      "DefWidth": 560,
+      "DefHeight": 112,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-clear",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "spinner-spin",
+      "DefWidth": 1,
+      "DefHeight": 1,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit0(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit50(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit100(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit100k(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+    
+    {
+      "Name": "hit300(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit300k(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name": "hit300g(-n)",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": ""
+    },
+
+    {
+      "Name":"particle50",
+      "DefWidth": 14,
+      "DefHeight": 14,
+      "Desc": ""
+    },
+
+    {
+      "Name": "particle100",
+      "DefWidth": 14,
+      "DefHeight": 14,
+      "Desc": ""
+    },
+
+    {
+      "Name": "particle300",
+      "DefWidth": 14,
+      "DefHeight": 14,
+      "Desc": ""
+    },
+
+    {
+      "Name": "lighting",
+      "DefWidth": 200,
+      "DefHeight": 200,
+      "Desc": ""
+    }
+  ]
+}
