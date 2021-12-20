@@ -8,7 +8,8 @@
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid>
         <Rectangle HorizontalAlignment="Left" Height="570" Margin="200,150,0,0" VerticalAlignment="Top" Width="1080" Fill="#FF282828"/>
-        <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="27" Width="964" Foreground="White"/>
+        <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="1150" Foreground="White"/>
         <ContentControl x:Name="editorControl" Margin="200,150,0,0"/>
+        <Button x:Name="Convert2x" Content="Convert @2x to low res" HorizontalAlignment="Left" Margin="1030,90,0,0" VerticalAlignment="Top" Height="50" Width="240" Click="Convert2x_Click"/>
     </Grid>
 </UserControl>
