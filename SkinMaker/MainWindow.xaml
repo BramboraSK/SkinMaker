@@ -1,15 +1,30 @@
-﻿<Window x:Name="MainWindow1" x:Class="SkinMaker.MainWindow"
+﻿<ccl:CustomChromeWindow x:Name="MainWindow1" x:Class="SkinMaker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
         xmlns:local="clr-namespace:SkinMaker"
-        mc:Ignorable="d"
-        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black">
+        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize" FontWeight="Bold">
+
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            ResizeBorderThickness="0"
+            CaptionHeight="43"
+            CornerRadius="10,10,10,10"
+            GlassFrameThickness="0">
+        </WindowChrome>
+    </WindowChrome.WindowChrome>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
     <Grid>
-        <Button x:Name="NewSkin" Content="New Skin" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click" Background="#FF9E00AE" Foreground="#FF9B9B9B"/>
-        <Button x:Name="OpenSkin" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250"/>
-        <Button x:Name="Options" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500"/>
+        <Ellipse x:Name="Shutdown" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1255,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFF605C" MouseLeftButtonDown="Shutdown_MouseDown"/>
+        <Ellipse x:Name="Minimize" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1230,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFFBD44" MouseLeftButtonDown="Minimize_MouseDown"/>
+        <ContentControl x:Name="contentControl"/>
     </Grid>
-</Window>
+</ccl:CustomChromeWindow>

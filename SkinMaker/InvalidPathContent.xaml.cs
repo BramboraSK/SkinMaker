@@ -10,18 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace SkinMaker
 {
     /// <summary>
-    /// Interakční logika pro EditorWindow.xaml
+    /// Interaction logic for InvalidPathControl.xaml
     /// </summary>
-    public partial class EditorWindow : Window
+    public partial class InvalidPathContent : UserControl
     {
-        public EditorWindow()
+        MainWindow mw;
+
+        public InvalidPathContent(MainWindow recievedWindow)
         {
+            mw = recievedWindow;
             InitializeComponent();
+        }
+
+        private void Options_Click(object sender, RoutedEventArgs e)
+        {
+            mw.contentControl.Content = new OptionsContent(mw);
         }
     }
 }
