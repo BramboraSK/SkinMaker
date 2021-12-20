@@ -13,6 +13,7 @@ namespace SkinMaker
         public class OptionsFile
         {
             public string SkinsFolderPath { get; set; }
+            public string ImageEditorPath { get; set; }
         }
 
         private static readonly string optionsFilename = "options.json";

@@ -50,8 +50,15 @@ namespace SkinMaker
         {    
             if (SkinName.Text.Length > 0)
             {
-                SkinCreate.CreateSkin(new Skin(SkinName.Text, SkinAuthor.Text), ChooseSkinTemplateButton.Content.ToString());
-                mw.contentControl.Content = new EditorContent(mw, SkinName.Text);
+                if (SkinCreate.CreateSkin(new Skin(SkinName.Text, SkinAuthor.Text), ChooseSkinTemplateButton.Content.ToString()))
+                {
+                    mw.contentControl.Content = new EditorContent(mw, SkinName.Text);
+                }
+                else
+                {
+                    SkinName.Background = Brushes.DarkRed;
+                    SkinAlreadyExists.Visibility = Visibility.Visible;
+                }
             }
             else
             {
@@ -65,6 +72,7 @@ namespace SkinMaker
             if (SkinName.Background == Brushes.DarkRed)
             {
                 SkinName.Background = Brushes.Transparent;
+                SkinAlreadyExists.Visibility = Visibility.Hidden;
             }
         }
 

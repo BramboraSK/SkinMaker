@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Diagnostics;
 
 namespace SkinMaker
 {
@@ -27,7 +28,21 @@ namespace SkinMaker
 
         private void ImageList_SelectionChanged(object sender, RoutedEventArgs e)
         {
-            Preview.Source = new BitmapImage(new Uri(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString())));
+            string imgSource = Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString());
+            string[] imgDim = EditImages.GetImageDim(imgSource);
+
+            Preview.Source = new BitmapImage(new Uri(imgSource));
+
+            PreviewWidth.Content = imgDim[0];
+            PreviewHeight.Content = imgDim[1];
+        }
+
+        private void EditButon_Click(object sender, RoutedEventArgs e)
+        {
+            string imgSource = Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString());
+            string imageEditorPath = OptionsLoader.options.ImageEditorPath;
+
+            Process.Start(imageEditorPath, $"\"{imgSource}\"");
         }
     }
 }
