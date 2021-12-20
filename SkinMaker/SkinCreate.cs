@@ -50,6 +50,8 @@ namespace SkinMaker
             config.CommentString = "/";
             config.KeyValueAssigmentChar = ':';
             config.AssigmentSpacer = "";
+            config.AllowDuplicateSections = true;
+            config.AllowDuplicateKeys = true;
 
             if (template == "(Empty)")
             {

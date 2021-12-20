@@ -28,8 +28,7 @@ namespace SkinMaker
                 OptionsFile newFile = new()
                 {
                     SkinsFolderPath = Directory.Exists(dir) ? dir : "",
-                    ImageEditorPath = @"C:\Windows\system32\mspaint.exe"
-
+                    ImageEditorPath = File.Exists(@"C:\Windows\system32\mspaint.exe") ? @"C:\Windows\system32\mspaint.exe" : ""
                 };
 
                 File.WriteAllText(optionsFilename, JsonSerializer.Serialize(newFile));

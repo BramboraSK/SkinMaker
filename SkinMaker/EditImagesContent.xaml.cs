@@ -39,10 +39,10 @@ namespace SkinMaker
 
         private void EditButon_Click(object sender, RoutedEventArgs e)
         {
-            string imgSource = Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString());
-            string imageEditorPath = OptionsLoader.options.ImageEditorPath;
-
-            Process.Start(imageEditorPath, $"\"{imgSource}\"");
+            if(ImageList.SelectedItem != null && File.Exists(OptionsLoader.options.ImageEditorPath))
+            {
+                Process.Start(OptionsLoader.options.ImageEditorPath, $"\"{Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString())}\"");
+            }
         }
     }
 }

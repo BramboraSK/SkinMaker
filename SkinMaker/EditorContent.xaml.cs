@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace SkinMaker
 {
@@ -35,6 +37,20 @@ namespace SkinMaker
             Editing.Text = $"Editing: {skinName}";
             editorControl.Content = new EditImagesContent(skinName);
         }
+
+        private void Convert2x_Click(object sender, RoutedEventArgs e)
+        {
+            foreach(string filename in Directory.EnumerateFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)))
+            {
+                if(filename.Contains("@2x"))
+                {
+                    System.Drawing.Image img = System.Drawing.Image.FromFile(filename);
+                    new Bitmap(new Bitmap(img), new System.Drawing.Size(img.Width / 2, img.Height / 2)).Save(filename.Replace("@2x", ""), filename.EndsWith(".png") ? ImageFormat.Png : ImageFormat.Jpeg);
+                }
+            }
+
+            editorControl.Content = new EditImagesContent(skinName);
+            
         public ObservableCollection<OsuStdMenuContent> OsuStdContent
         {
             get { return _osuStdContent; }
