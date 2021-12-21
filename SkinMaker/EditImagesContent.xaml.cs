@@ -20,7 +20,12 @@ namespace SkinMaker
             this.skinName = skinName;
             InitializeComponent();
 
-            foreach(string filename in Directory.GetFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)).Where(filename => filename.EndsWith(".png") || filename.EndsWith(".jpg")))
+            FillImageBox();
+        }
+
+        private void FillImageBox()
+        {
+            foreach (string filename in Directory.GetFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)).Where(filename => filename.EndsWith(".png") || filename.EndsWith(".jpg")))
             {
                 ImageList.Items.Add(Path.GetFileName(filename));
             }
@@ -45,7 +50,7 @@ namespace SkinMaker
 
         private void EditButon_Click(object sender, RoutedEventArgs e)
         {
-            if(ImageList.SelectedItem != null && File.Exists(OptionsLoader.options.ImageEditorPath))
+            if (ImageList.SelectedItem != null && File.Exists(OptionsLoader.options.ImageEditorPath))
             {
                 Process.Start(OptionsLoader.options.ImageEditorPath, $"\"{Path.Join(OptionsLoader.options.SkinsFolderPath, skinName, ImageList.SelectedItem.ToString())}\"");
             }

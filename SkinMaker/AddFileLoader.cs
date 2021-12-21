@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
 using System.IO;
+using System.Drawing;
+using System.Drawing.Imaging;
 
 namespace SkinMaker
 {
@@ -29,6 +31,21 @@ namespace SkinMaker
         public static string GetFileDesc(string file)
         {
            return content.OsuStdFiles.Find(e => e.Name == file).Desc;
+        }
+
+        public static void CreateSelectedFile(string file, string skinName)
+        {
+            int imageWidth = content.OsuStdFiles.Find(e => e.Name == file).DefWidth;
+            int imageHeigth = content.OsuStdFiles.Find(e => e.Name == file).DefHeight;
+
+            using (Bitmap image = new Bitmap(imageWidth, imageHeigth))
+            {
+                using (Graphics g = Graphics.FromImage(image))
+                {
+                    g.Clear(Color.Transparent);
+                }
+                image.Save(@$"{OptionsLoader.options.SkinsFolderPath}\{skinName}\{file}@2x.png", ImageFormat.Png);
+            }
         }
     }
 }
