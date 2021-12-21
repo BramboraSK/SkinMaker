@@ -72,6 +72,11 @@ namespace SkinMaker
             set { _osuStdContent = value; }
         }
 
+        public class OsuStdMenuContent
+        {
+            public string Title { get; set; }
+        }
+
         private void BackToMenu_Click(object sender, RoutedEventArgs e)
         {
             mw.contentControl.Content = new MainContent(mw);
@@ -85,9 +90,18 @@ namespace SkinMaker
                 item = new ListBoxItem();
                 item.Content = file.Name;
                 item.MouseEnter += new MouseEventHandler(item_MouseEnter);
+                item.Selected += new RoutedEventHandler(item_Selected);
                 osuStdListbox.Items.Add(item);
             }
         }
+        
+        private void item_Selected(object sender, RoutedEventArgs e)
+        {
+            AddFileLoader.CreateSelectedFile(((ListBoxItem)sender).Content.ToString(), skinName);
+
+            editorControl.Content = new EditImagesContent(skinName);
+        }
+
 
         private void Remove2x_Click(object sender, RoutedEventArgs e)
         {
@@ -113,11 +127,4 @@ namespace SkinMaker
             MenuDescPopup.IsOpen = false;
         }
     }
-
-    public class OsuStdMenuContent
-    {
-        public string Title { get; set; }
-    }
-
-
 }
