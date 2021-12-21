@@ -37,6 +37,16 @@ namespace SkinMaker
 
             Editing.Text = $"Editing: {skinName}";
             editorControl.Content = new EditImagesContent(skinName);
+
+            FileSystemWatcher watcher = new(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
+
+            watcher.Changed += OnChanged;
+            watcher.IncludeSubdirectories = true;
+        }
+
+        private void OnChanged(object sender, FileSystemEventArgs e)
+        {
+            editorControl.Content = new EditImagesContent(skinName);
         }
 
         private void Convert2x_Click(object sender, RoutedEventArgs e)
