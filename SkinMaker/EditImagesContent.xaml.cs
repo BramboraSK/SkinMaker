@@ -14,13 +14,19 @@ namespace SkinMaker
     public partial class EditImagesContent : UserControl
     {
         string skinName;
+        EditorContent ec;
 
-        public EditImagesContent(string skinName)
+        public EditImagesContent(string skinName, EditorContent ec, string lastSelected)
         {
+            this.ec = ec;
             this.skinName = skinName;
             InitializeComponent();
-
             FillImageBox();
+
+            if (lastSelected != null && ImageList.Items.Contains(lastSelected))
+            {
+                ImageList.SelectedItem = lastSelected;
+            }
         }
 
         private void FillImageBox()
@@ -38,12 +44,14 @@ namespace SkinMaker
 
             BitmapImage bmi = new();
             bmi.BeginInit();
+            bmi.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
             bmi.CacheOption = BitmapCacheOption.OnLoad;
             bmi.UriSource = new Uri(imgSource);
             bmi.EndInit();
 
             Preview.Source = bmi;
 
+            ec.lastSelected = ImageList.SelectedItem.ToString();
             PreviewWidth.Content = imgDim[0];
             PreviewHeight.Content = imgDim[1];
         }

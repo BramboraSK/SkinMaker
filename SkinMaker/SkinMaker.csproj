@@ -40,7 +40,7 @@
     <None Update="ImageContent.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Stuff.txt">
+    <None Update="PlansCreditsNotes.txt">
       <Generator>MSBuild:Compile</Generator>
     </None>
     <None Update="Templates\skin.ini">

@@ -16,6 +16,9 @@ using System.Windows.Navigation;
 using System.Drawing;
 using System.Drawing.Imaging;
 using Microsoft.VisualBasic.FileIO;
+using System.Diagnostics;
+using System.Windows.Threading;
+using menelabs.core;
 
 namespace SkinMaker
 {
@@ -24,19 +27,40 @@ namespace SkinMaker
     /// </summary>
     public partial class EditorContent : UserControl
     {
+        public string lastSelected;
         private ObservableCollection<OsuStdMenuContent> _osuStdContent = new();
         MainWindow mw;
         string skinName;
+        FileSystemSafeWatcher watcher;
         public EditorContent(MainWindow recievedWindow, string skinName)
         {
             this.skinName = skinName;
             mw = recievedWindow;
 
+            watcher = new(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
+
+            watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastAccess
+                                 | NotifyFilters.LastWrite;
+
+            watcher.Changed += OnChanged;
+            watcher.Created += OnChanged;
+            watcher.Deleted += OnChanged;
+            watcher.Renamed += OnChanged;
+
+            watcher.Filter = "*.*";
+            watcher.IncludeSubdirectories = true;
+            watcher.EnableRaisingEvents = true;
+
+
             InitializeComponent();
             FillOsuStdListbox();
 
             Editing.Text = $"Editing: {skinName}";
-            editorControl.Content = new EditImagesContent(skinName);
+            editorControl.Content = new EditImagesContent(skinName, this, lastSelected); 
         }
 
         private void Convert2x_Click(object sender, RoutedEventArgs e)
@@ -52,8 +76,14 @@ namespace SkinMaker
                     bm.Save(filename.Replace("@2x", ""), filename.EndsWith(".png") ? ImageFormat.Png : ImageFormat.Jpeg);
                 }
             }
+        }
 
-            editorControl.Content = new EditImagesContent(skinName);
+        private void OnChanged(object sender, FileSystemEventArgs e)
+        {
+            Application.Current.Dispatcher.BeginInvoke(
+            DispatcherPriority.Background,
+            new Action(() => editorControl.Content = new EditImagesContent(skinName, this, lastSelected)));
+
         }
 
         public ObservableCollection<OsuStdMenuContent> OsuStdContent
@@ -88,8 +118,6 @@ namespace SkinMaker
         private void item_Selected(object sender, RoutedEventArgs e)
         {
             AddFileLoader.CreateSelectedFile(((ListBoxItem)sender).Content.ToString(), skinName);
-
-            editorControl.Content = new EditImagesContent(skinName);
         }
 
 
@@ -102,8 +130,6 @@ namespace SkinMaker
                     FileSystem.DeleteFile(filename, UIOption.OnlyErrorDialogs, RecycleOption.SendToRecycleBin);
                 }
             }
-
-            editorControl.Content = new EditImagesContent(skinName);
         }
             
         private void item_MouseEnter(object sender, MouseEventArgs e)

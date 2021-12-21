@@ -13,6 +13,6 @@
         <Button x:Name="Options" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
         <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Exit_Click"/>
         <Image HorizontalAlignment="Left" Height="626" Margin="640,0,0,0" VerticalAlignment="Center" Width="630" Source="/XDMatej.png" Opacity="0.5"/>
-        <Image HorizontalAlignment="Left" Height="95" Margin="100,107,0,0" VerticalAlignment="Top" Width="555" Source="/Title.png"/>
+        <Label Content="Skin Maker" HorizontalAlignment="Left" Margin="100,107,0,0" VerticalAlignment="Top" Height="118" Width="500" FontFamily="Aller" FontSize="90" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF9E00AE"/>
     </Grid>
 </UserControl>
