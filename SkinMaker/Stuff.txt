@@ -10,10 +10,6 @@
 
 
 
-// Changes
-
-20.12.21
-	- Added check if skin name already exists
 
 
 
