@@ -8,11 +8,11 @@
              mc:Ignorable="d" 
              d:DesignHeight="634" d:DesignWidth="1280">
     <Grid>
-        <Label Content="Name" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="24" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
         <TextBox x:Name="Name" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,69,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="330" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
         <TextBox x:Name="Author" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,159,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="330" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
-        <Label Content="Author" HorizontalAlignment="Left" Margin="40,130,0,0" VerticalAlignment="Top" Height="24" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
-        <Label Content="Animation Framerate" HorizontalAlignment="Left" Margin="40,220,0,0" VerticalAlignment="Top" Height="24" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Label Content="Author" HorizontalAlignment="Left" Margin="40,130,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Label Content="Animation Framerate" HorizontalAlignment="Left" Margin="40,220,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
         <TextBox x:Name="AnimationFramerate" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,249,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="126" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
         <Label Content="FPS" HorizontalAlignment="Left" Margin="119,254,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF2C2C2C" FontFamily="Aller" FontSize="20" Height="30" Width="42" HorizontalContentAlignment="Right"/>
         <Label Content="Allow slider ball tint" HorizontalAlignment="Left" Margin="516,77,0,0" VerticalAlignment="Top" Height="24" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,0" VerticalContentAlignment="Center"/>
@@ -88,7 +88,7 @@
             </CheckBox.LayoutTransform>
         </CheckBox>
         <TextBox x:Name="CustomComboBurstSounds" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,339,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="330" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
-        <Label Content="Custom combo burst sounds" HorizontalAlignment="Left" Margin="40,310,0,0" VerticalAlignment="Top" Height="24" Width="330" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Label Content="Custom combo burst sounds" HorizontalAlignment="Left" Margin="40,310,0,0" VerticalAlignment="Top" Height="29" Width="330" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
 
     </Grid>
 </UserControl>

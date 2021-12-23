@@ -72,12 +72,12 @@ namespace SkinMaker
         {
             foreach (var tb in FindVisualChildren<TextBox>(mw))
             {
-                tb.Text = skinIniEditor.GetIniData(skinName, "General", tb.Name.ToString());
+                tb.Text = skinIniEditor.GetIniData(skinName, "General", tb.Name.ToString(), false);
             }
 
             foreach (var chb in FindVisualChildren<CheckBox>(mw))
             {
-                if (skinIniEditor.GetIniData(skinName, "General", chb.Name.ToString()) == "1")
+                if (skinIniEditor.GetIniData(skinName, "General", chb.Name.ToString(), false) == "1")
                 {
                     chb.IsChecked = true;
                 }

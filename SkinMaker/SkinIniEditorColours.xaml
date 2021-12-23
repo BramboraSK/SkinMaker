@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="SkinMaker.SkinIniEditorColours"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SkinMaker"
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+             mc:Ignorable="d" 
+             Loaded="OnLoad"
+             d:DesignHeight="634" d:DesignWidth="1280">
+    <Grid>
+        <xctk:ColorCanvas Name="RGBPicker" SelectedColorChanged="ColorPicker_SelectedColorChanged" UsingAlphaChannel="False" BorderThickness="5,5,5,5" Margin="986,69,40,319" Background="{x:Null}" FontFamily="Aller" Foreground="White" BorderBrush="#FF9E00AE" FontWeight="Normal" HorizontalContentAlignment="Left" VerticalContentAlignment="Top"/>
+        <TextBox x:Name="Combo1" PreviewMouseDown="TextBox_UpdateSelected" TextChanged="TextBox_TextChanged" Text="255,255,255" HorizontalAlignment="Left" Margin="40,69,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="175" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
+        <Label x:Name="Combo1Label" Content="Combo1" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <TextBox x:Name="Combo2" PreviewMouseDown="TextBox_UpdateSelected" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,159,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="175" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
+        <Label x:Name="Combo2Label" Content="Combo2" HorizontalAlignment="Left" Margin="40,130,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <TextBox x:Name="Combo3" PreviewMouseDown="TextBox_UpdateSelected" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,249,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="175" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
+        <Label x:Name="Combo3Label" Content="Combo3" MouseLeftButtonDown="TextBox_UpdateSelected" HorizontalAlignment="Left" Margin="40,220,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <TextBox x:Name="Combo4" PreviewMouseDown="TextBox_UpdateSelected" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,339,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="175" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>
+        <Label x:Name="Combo4Label" Content="Combo4" HorizontalAlignment="Left" Margin="40,310,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Label Name="ColorPickerLabel" Content="Editing:" HorizontalAlignment="Left" Margin="986,40,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
+        <Frame x:Name="Combo1Frame" HorizontalAlignment="Left" Height="30" Margin="180,74,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.447,0.633" Background="Transparent" Foreground="{x:Null}"/>
+        <Frame x:Name="Combo2Frame" HorizontalAlignment="Left" Height="30" Margin="180,164,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.447,0.633" Background="Transparent" Foreground="{x:Null}"/>
+        <Frame x:Name="Combo3Frame" HorizontalAlignment="Left" Height="30" Margin="180,254,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.447,0.633" Background="Transparent" Foreground="{x:Null}"/>
+        <Frame x:Name="Combo4Frame" HorizontalAlignment="Left" Height="30" Margin="180,344,0,0" VerticalAlignment="Top" Width="30" RenderTransformOrigin="0.447,0.633" Background="Transparent" Foreground="{x:Null}"/>
+    </Grid>
+</UserControl>

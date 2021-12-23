@@ -35,10 +35,6 @@ namespace SkinMaker
 
         private void ChangeIniValue(string section, string key, string value)
         {
-            if (true)
-            {
-
-            }
             data[section][key] = value;
             SaveSkinIni();
         }
@@ -49,7 +45,7 @@ namespace SkinMaker
             File.WriteAllText($@"{OptionsLoader.options.SkinsFolderPath}\{skinName}\skin.ini", data.ToString());
         }
 
-        public string GetIniData(string skinName, string section, string key)
+        public string GetIniData(string skinName, string section, string key, bool returnNull)
         {
             this.skinName = skinName;
             parser = new IniDataParser();
@@ -63,8 +59,15 @@ namespace SkinMaker
             config.AllowDuplicateSections = true;
             config.AllowDuplicateKeys = true;
 
-            data = parser.Parse(File.ReadAllText($@"{OptionsLoader.options.SkinsFolderPath}\{skinName}\skin.ini"));
-
+            try
+            {
+                data = parser.Parse(File.ReadAllText($@"{OptionsLoader.options.SkinsFolderPath}\{skinName}\skin.ini"));
+            }
+            catch (IOException)
+            {
+                System.Threading.Thread.Sleep(1000);
+                data = parser.Parse(File.ReadAllText($@"{OptionsLoader.options.SkinsFolderPath}\{skinName}\skin.ini"));
+            }
 
             if (data[section][key] != null)
             {
@@ -72,13 +75,19 @@ namespace SkinMaker
             }
             else
             {
-                IniData defaultData = parser.Parse(File.ReadAllText(@"Templates\skin.ini"));
-                defaultData.Merge(data);
-                data = defaultData;
+                if (returnNull)
+                {
+                    return null;
+                }
+                else
+                {
+                    IniData defaultData = parser.Parse(File.ReadAllText(@"Templates\skin.ini"));;
+                    data[section][key] = defaultData[section][key];
 
-                SaveSkinIni();
+                    SaveSkinIni();
 
-                return data[section][key];
+                    return data[section][key];
+                }
             }
         }
         

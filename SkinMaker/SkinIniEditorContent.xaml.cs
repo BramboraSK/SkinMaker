@@ -48,7 +48,10 @@ namespace SkinMaker
 
         private void ColoursButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (SectionController.Content != new SkinIniEditorColours(mw, skinName))
+            {
+                SectionController.Content = new SkinIniEditorColours(mw, skinName);
+            }
         }
 
         private void FontButton_Click(object sender, RoutedEventArgs e)
