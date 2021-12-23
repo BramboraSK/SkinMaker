@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
         xmlns:local="clr-namespace:SkinMaker"
-        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize" FontWeight="Bold">
+        Title="Skin Maker" Height="720" Width="1280" FontSize="20" FontFamily="Aller" Background="#FF2C2C2C" Foreground="Black" ResizeMode="CanMinimize">
 
     <WindowChrome.WindowChrome>
         <WindowChrome
@@ -23,8 +23,12 @@
     </Window.Resources>
 
     <Grid>
-        <Ellipse x:Name="Shutdown" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1255,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFF605C" MouseLeftButtonDown="Shutdown_MouseDown"/>
-        <Ellipse x:Name="Minimize" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1230,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFFBD44" MouseLeftButtonDown="Minimize_MouseDown"/>
-        <ContentControl x:Name="contentControl"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="137*"/>
+            <ColumnDefinition Width="1143*"/>
+        </Grid.ColumnDefinitions>
+        <Ellipse x:Name="Shutdown" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1118,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFF605C" MouseLeftButtonDown="Shutdown_MouseDown" Grid.Column="1"/>
+        <Ellipse x:Name="Minimize" WindowChrome.IsHitTestVisibleInChrome="True" HorizontalAlignment="Left" Height="15" Margin="1093,10,0,0" VerticalAlignment="Top" Width="15" Fill="#FFFFBD44" MouseLeftButtonDown="Minimize_MouseDown" Grid.Column="1"/>
+        <ContentControl x:Name="contentControl" Grid.ColumnSpan="2"/>
     </Grid>
 </ccl:CustomChromeWindow>

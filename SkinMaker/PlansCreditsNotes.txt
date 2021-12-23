@@ -13,7 +13,6 @@
 
 // Known issues
 
-	Clicking in ImageList ListBox and draging (that means not selecting new item) will jump you back to last selected file
 	Alot of crashing when doing an invalid action
 
 	Slow refreshing (not important for now)
@@ -21,7 +20,11 @@
 // Future plans
 
 	TODO:
-	Add skin.ini editor 0%
+	Add skin.ini editor 30%
+		[General] editing 90%
+		[Colours] editing 0%
+		[Font] editing 0%
+
 	Add properties displayer for selected image 5%
 	Support adding sprites from other skin in \skins folder 0%
 	Add full support for osu!std gameplay and whole osu UI (this means add files to Add File button, add templates) 30%

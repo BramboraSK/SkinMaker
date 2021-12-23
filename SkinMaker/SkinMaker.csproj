@@ -4,11 +4,11 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Images\SkinMakerIcon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Title.png" />
-    <None Remove="XDMatej.png" />
+    <None Remove="Images\SkinMakerLogo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,16 +21,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Images\SkinMakerIcon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\SkinMakerLogo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DotNetProjects.CustomChromeLibrary" Version="1.0.3" />
     <PackageReference Include="ini-parser" Version="2.5.2" />
     <PackageReference Include="ini-parser-netstandard" Version="2.5.2" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Title.png" />
-    <Resource Include="XDMatej.png" />
   </ItemGroup>
 
   <ItemGroup>

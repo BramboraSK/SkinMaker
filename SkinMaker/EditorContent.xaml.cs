@@ -43,7 +43,6 @@ namespace SkinMaker
                                  | NotifyFilters.CreationTime
                                  | NotifyFilters.DirectoryName
                                  | NotifyFilters.FileName
-                                 | NotifyFilters.LastAccess
                                  | NotifyFilters.LastWrite;
 
             watcher.Changed += OnChanged;
@@ -52,7 +51,7 @@ namespace SkinMaker
             watcher.Renamed += OnChanged;
 
             watcher.Filter = "*.*";
-            watcher.IncludeSubdirectories = true;
+            watcher.IncludeSubdirectories = false;
             watcher.EnableRaisingEvents = true;
 
 
@@ -141,6 +140,11 @@ namespace SkinMaker
         private void osuStdListbox_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
             MenuDescPopup.IsOpen = false;
+        }
+
+        private void SkinIniEditorButton_Click(object sender, RoutedEventArgs e)
+        {
+            mw.contentControl.Content = new SkinIniEditorContent(mw, skinName);
         }
     }
 }
