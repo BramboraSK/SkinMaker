@@ -1,0 +1,49 @@
+﻿
+// Dalibor
+	
+	Grey hex: #FF2C2C2C
+	Purple hex: #FF9E00AE
+
+
+// Majo
+
+
+
+
+
+// Known issues
+
+	Alot of crashing when doing an invalid action
+
+	Slow refreshing (not important for now)
+
+// Future plans
+
+	TODO:
+	Add skin.ini editor 30%
+		[General] editing 90%
+		[Colours] editing 0%
+		[Font] editing 0%
+
+	Add properties displayer for selected image 5%
+	Support adding sprites from other skin in \skins folder 0%
+	Add full support for osu!std gameplay and whole osu UI (this means add files to Add File button, add templates) 30%
+	Add preview tab
+	Add filter / searching to ImageList ListBox
+	Add simple hitsound copying from other skins
+	Add bunch of templates
+
+	Installer
+
+	(Future future)
+	Support hitsound editing
+	Support other gamemodes
+	Update UI
+
+
+
+
+
+// Credits
+
+Haskorion - Skinnable files docs https://docs.google.com/spreadsheets/d/1bhnV-CQRMy3Z0npQd9XSoTdkYxz0ew5e648S00qkJZ8/edit#gid=2074725196

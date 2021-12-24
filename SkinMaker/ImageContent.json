@@ -4,329 +4,384 @@
       "Name": "default-0",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": "One of the numbers (0) shown on hit circle."
+      "Desc": "One of the numbers (0) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     { 
       "Name": "default-1",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (1) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11. New Combo will refresh count to this number.",
+      "Anim": false
     },
 
     {
       "Name": "default-2",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (2) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-3",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (3) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-4",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (4) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-5",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (5) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-6",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (6) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-7",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (7) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-8",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (8) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "default-9",
       "DefWidth": 64,
       "DefHeight": 64,
-      "Desc": ""
+      "Desc": "One of the numbers (9) shown on hit circle. When the hitcircle number is higer than 9, numbers are show next to each other to create for example 11.",
+      "Anim": false
     },
 
     {
       "Name": "approachcircle",
       "DefWidth": 252,
       "DefHeight": 252,
-      "Desc": ""
+      "Desc": "Shrinks overtime. This SHOULD be a circle. Tinting depends on the hit circle's combo colour.",
+      "Anim": false
     },
 
     {
       "Name": "hitcircle",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Fades in before getting tapped and expands when tapped or missed. This SHOULD be a circle. Tinting depends on the hit circle's combo colour. (Also used for 'sliderstartcircle' and/or 'sliderendcircle' if not skinned.)",
+      "Anim": false
     },
 
     {
-      "Name": "hitcircleoverlay(-n)",
+      "Name": "hitcircleoverlay",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Fades in before getting tapped and expands when tapped or missed. This SHOULD be a circle and can either overlay or underlay the combo number, by default this will always overlay (You can change this in skin.ini {HitCircleOverlayAboveNumber}). Also used for sliderstartcircleoverlay and/or sliderendcircleoverlay if not skinned. Can be animated (2 FPS at default; affected by DT/HT)",
+      "Anim": true
     },
 
     {
-      "Name": "followpoint(-n)",
+      "Name": "hitcircleselect",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "Used in editor to highlight selected notes on playfield. This SHOULD be a circle.",
+      "Anim": false
+    },
+
+    {
+      "Name": "followpoint",
       "DefWidth": 120,
       "DefHeight": 10,
-      "Desc": ""
+      "Desc": "Points towards next hitcircle (if arrow like + should point towards right) or is shown as a line between 2 notes in gameplay (modern solution). Can be animated (Stays on screen for 1200ms / 1,2 seconds)",
+      "Anim": true
     },
 
     {
       "Name": "reversearrow",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown at point where slider is repeated. This is automatically rotated to line up with slider. Pulses with BPM.",
+      "Anim": false
     },
 
     {
       "Name": "sliderstartcircle",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Overrides hitcircle if skinned. Behaves just like hitcircle but is only shown at the start of a slider.",
+      "Anim": false
     },
     
     {
-      "Name": "sliderstartcircleoverlay(-n)",
+      "Name": "sliderstartcircleoverlay",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Overrides hitcircleoverlay if skinned. Behaves just like hitcircleoverlay but is only shown at the start of a slider. Requires sliderstartcircle.",
+      "Anim": true
     },
 
     {
       "Name": "sliderendcircle",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Overrides hitcircle if skinned. Behaves just like hitcircle but is only shown at the end of a slider.",
+      "Anim": false
     },
 
     {
-      "Name": "sliderendcircleoverlay(-n)",
+      "Name": "sliderendcircleoverlay",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Overrides hitcircleoverlay if skinned. Behaves just like hitcircleoverlay but is only shown at the start of a slider. Requires sliderstartcircle.",
+      "Anim": true
     },
 
     {
-      "Name": "sliderfollowcircle(-n)",
+      "Name": "sliderfollowcircle",
       "DefWidth": 512,
       "DefHeight": 512,
-      "Desc": ""
+      "Desc": "Follows path of a slider. Player has to stay inside this to not sliderbreak. Expands a bit when slider tick is collected. Hitbox: 308x308. Can be animated.",
+      "Anim": true
     },
 
     {
-      "Name": "sliderb(n)",
+      "Name": "sliderb",
       "DefWidth": 236,
       "DefHeight": 236,
-      "Desc": ""
+      "Desc": "Ball that follows slider's path. Flips when reverse arrow is hit (This can be disabled in skin.ini {sliderballflip}). Can be animated.",
+      "Anim": true
     },
 
     {
       "Name": "sliderb-nd",
       "DefWidth": 236,
       "DefHeight": 236,
-      "Desc": ""
+      "Desc": "Background layer for default slider ball. Ignored if sliderb is skinned. Tinted black. Skinnable by beatmap (if player doesn't have sliderb skinned in their skin).",
+      "Anim": false
     },
 
     {
       "Name": "sliderb-spec",
       "DefWidth": 236,
       "DefHeight": 236,
-      "Desc": ""
+      "Desc": "Top layer of the ball that stays in a static position (does not flip nor rotate). Ignored if sliderb is skinned. Skinnable by beatmap (if player doesn't have sliderb skinned in their skin).",
+      "Anim": false
     },
 
     {
       "Name": "sliderscorepoint",
       "DefWidth": 32,
       "DefHeight": 32,
-      "Desc": ""
+      "Desc": "Also know as 'slider tick'. Usually a small dot that locates slider's score point (player has to be inside sliderfollowcircle when score point is hit to not sliderbreak). If this element is overlapping the slider start or end, it will not be rendered. Also used in osu!taiko.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-background",
       "DefWidth": 2048,
       "DefHeight": 1404,
-      "Desc": ""
+      "Desc": "OLD STYLE! Background of an spinner. Careful! Osu is LOOKING for this element and if found, it will FORCE old styled spinners!",
+      "Anim": false
     },
 
     {
       "Name": "spinner-circle",
       "DefWidth": 727,
       "DefHeight": 727,
-      "Desc": ""
+      "Desc": "OLD STYLE! Rotating part of the spinner. Also used for osu!Taiko.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-metre",
       "DefWidth": 2048,
       "DefHeight": 1384,
-      "Desc": ""
+      "Desc": "OLD STYLE! Shows progression of the spinner. Highest part of the bar will blink when bonus points are awarded (You can change this in skin.ini {SpinnerNoBlink}).",
+      "Anim": false
     },
 
     {
       "Name": "spinner-bottom",
       "DefWidth": 727,
       "DefHeight": 727,
-      "Desc": ""
+      "Desc": "NEW STYLE! Rotates the slowest and is the 2nd lowest layer.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-glow",
       "DefWidth": 2048,
       "DefHeight": 1384,
-      "Desc": ""
+      "Desc": "NEW STYLE! Tinted cyan, blinks white when bonus points are awarded. Lowest layer.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-middle",
       "DefWidth": 727,
       "DefHeight": 727,
-      "Desc": ""
+      "Desc": "Tinted red over time (this is the time indicator). Highest layer.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-middle2",
       "DefWidth": 727,
       "DefHeight": 727,
-      "Desc": ""
+      "Desc": "Rotates the fastest. Second highest layer",
+      "Anim": false
     },
 
     {
       "Name": "spinner-top",
       "DefWidth": 727,
       "DefHeight": 727,
-      "Desc": ""
+      "Desc": "Rotates the second fastest. Middle layer.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-approachcircle",
       "DefWidth": 768,
       "DefHeight": 768,
-      "Desc": ""
+      "Desc": "BOTH STYLES! Shrinks over time (like approachcircle). Usage is forced when spinner-circle.png or spinner-top.png is skinned. Positioned around 397px vertically. Also used in osu!Taiko.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-rpm",
       "DefWidth": 560,
       "DefHeight": 112,
-      "Desc": ""
+      "Desc": "BOTH STYLES! Usually a small box with text which shows how fast you spin. RPM is short for 'Revolutions Per Minute'.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-clear",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "BOTH STYLES! Appears when the player has fulfilled the spinner. This element is positioned around 230px vertically.",
+      "Anim": false
     },
 
     {
       "Name": "spinner-spin",
       "DefWidth": 1,
       "DefHeight": 1,
-      "Desc": ""
+      "Desc": "BOTH STYLES! Appears at the start of a spinner. This element is positioned around 582px vertically.",
+      "Anim": false
     },
 
     {
-      "Name": "hit0(-n)",
+      "Name": "hit0",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player misses. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
-      "Name": "hit50(-n)",
+      "Name": "hit50",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 50. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
-      "Name": "hit100(-n)",
+      "Name": "hit100",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 100. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
-      "Name": "hit100k(-n)",
+      "Name": "hit100k",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 100k. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
     
     {
-      "Name": "hit300(-n)",
+      "Name": "hit300",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 300. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
-      "Name": "hit300k(-n)",
+      "Name": "hit300k",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 300k. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
-      "Name": "hit300g(-n)",
+      "Name": "hit300g",
       "DefWidth": 256,
       "DefHeight": 256,
-      "Desc": ""
+      "Desc": "Shown when player scores a 300g. Can be animated (fixed 60FPS; animation doesn't loop, but the last frame persists until it fades out).",
+      "Anim": true
     },
 
     {
       "Name":"particle50",
       "DefWidth": 14,
       "DefHeight": 14,
-      "Desc": ""
+      "Desc": "Particle that's shown when 50 is scored. hit50 must be skinned.",
+      "Anim": false
     },
 
     {
       "Name": "particle100",
       "DefWidth": 14,
       "DefHeight": 14,
-      "Desc": ""
+      "Desc": "Particle that's shown when 100 or 100k is scored. hit100 must be skinned.",
+      "Anim": false
     },
 
     {
       "Name": "particle300",
       "DefWidth": 14,
       "DefHeight": 14,
-      "Desc": ""
+      "Desc": "Particle that's shown when 300, 300g or 300k is scored. hit300 must be skinned.",
+      "Anim": false
     },
 
     {
       "Name": "lighting",
       "DefWidth": 200,
       "DefHeight": 200,
-      "Desc": ""
+      "Desc": "Used during kiai time (Coloured afterimage as part of hitburst explosion and glow behind hitcircles). Tinting depends on the hit circle's combo colour. Also used in osu!Taiko and osu!catch",
+      "Anim": false
     }
   ]
 }

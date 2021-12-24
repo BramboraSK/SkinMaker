@@ -7,8 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid>
-        <Label Content="Invalid skins path!" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Foreground="White" FontSize="72"/>
-        <Label Content="Go to Options to change it." HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
-        <Button x:Name="Options" Content="Options" HorizontalAlignment="Center" Margin="0,442,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
+        <Label Content="Invalid skins path!" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,84,0,0" VerticalAlignment="Top" Foreground="White" FontSize="72"/>
+        <Label Content="Go to Options to change it." FontWeight="Bold" HorizontalAlignment="Center" Margin="0,195,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36"/>
+        <Button x:Name="Options" Content="Options" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,442,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
     </Grid>
 </UserControl>

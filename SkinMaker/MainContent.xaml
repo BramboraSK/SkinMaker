@@ -8,11 +8,11 @@
              d:DesignHeight="720" d:DesignWidth="1280">
 
     <Grid>
-        <Button x:Name="NewSkin" Content="New Skin" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click" />
-        <Button x:Name="OpenSkin" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250" Click="OpenSkin_Click" />
-        <Button x:Name="Options" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
-        <Button x:Name="Exit" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Exit_Click"/>
-        <Image HorizontalAlignment="Left" Height="626" Margin="640,0,0,0" VerticalAlignment="Center" Width="630" Source="/XDMatej.png" Opacity="0.5"/>
-        <Image HorizontalAlignment="Left" Height="95" Margin="100,107,0,0" VerticalAlignment="Top" Width="555" Source="/Title.png"/>
+        <Button x:Name="NewSkin" FontWeight="Bold" Content="New Skin" HorizontalAlignment="Left" Margin="100,344,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="NewSkin_Click" />
+        <Button x:Name="OpenSkin" FontWeight="Bold" Content="Open Skin" HorizontalAlignment="Left" Margin="350,344,0,0" VerticalAlignment="Top" Height="60" Width="250" Click="OpenSkin_Click" />
+        <Button x:Name="Options" FontWeight="Bold" Content="Options" HorizontalAlignment="Left" Margin="100,444,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Options_Click"/>
+        <Button x:Name="Exit" FontWeight="Bold" Content="Exit" HorizontalAlignment="Left" Margin="100,544,0,0" VerticalAlignment="Top" Height="60" Width="500" Click="Exit_Click"/>
+        <Image x:Name="Logo" HorizontalAlignment="Left" Height="626" Margin="758,0,0,0" VerticalAlignment="Center" Width="418" Source="pack://application:,,,/Images/SkinMakerLogo.png" Opacity="0.4"/>
+        <Label Content="Skin Maker" HorizontalAlignment="Left" Margin="100,107,0,0" VerticalAlignment="Top" Height="118" Width="500" FontFamily="Aller" FontSize="90" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="#FF9E00AE"/>
     </Grid>
 </UserControl>
