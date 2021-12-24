@@ -146,5 +146,10 @@ namespace SkinMaker
         {
             mw.contentControl.Content = new SkinIniEditorContent(mw, skinName);
         }
+
+        private void Editing_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Process.Start("explorer.exe", Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
+        }
     }
 }
