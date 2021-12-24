@@ -11,3 +11,11 @@ Skin Maker is currently in a very early stage of development and the only featur
 ## Join us
 
 We'll be more than happy to welcome new people to our small dev team. If you have an idea and you're able to put it in code, simply make a pull request and we'll take a look. If you're intrested more serious collaboration, please contact us on Discord (Dalibor#7440 or BramboraSK#0727)
+
+## Current state
+
+This is just how Skin Maker currently looks like (yes, it's still in early state of development) as of 12/24/2021
+
+
+https://user-images.githubusercontent.com/77931392/147355095-d73f2d06-2295-4375-92ea-9409ab4cd0a2.mp4
+
