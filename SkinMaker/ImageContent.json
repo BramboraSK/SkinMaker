@@ -383,5 +383,375 @@
       "Desc": "Used during kiai time (Coloured afterimage as part of hitburst explosion and glow behind hitcircles). Tinting depends on the hit circle's combo colour. Also used in osu!Taiko and osu!catch",
       "Anim": false
     }
+  ],
+
+  "GameplayFiles": [
+    {
+      "Name": "pause-overlay",
+      "DefWidth": 2732,
+      "DefHeight": 1536,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "fail-background",
+      "DefWidth": 1920,
+      "DefHeight": 1080,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "pause-back",
+      "DefWidth": 500,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "pause-continue",
+      "DefWidth": 500,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "pause-retry",
+      "DefWidth": 500,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "pause-replay",
+      "DefWidth": 500,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scorebar-bg",
+      "DefWidth": 1400,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scorebar-colour",
+      "DefWidth": 1400,
+      "DefHeight": 240,
+      "Desc": "",
+      "Anim": true
+    },
+
+    {
+      "Name": "scorebar-ki",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scorebar-kidanger",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scorebar-kidanger2",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scorebar-marker",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "ready",
+      "DefWidth": 450,
+      "DefHeight": 150,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "count3",
+      "DefWidth": 450,
+      "DefHeight": 150,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "count2",
+      "DefWidth": 450,
+      "DefHeight": 150,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "count1",
+      "DefWidth": 450,
+      "DefHeight": 150,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "go",
+      "DefWidth": 450,
+      "DefHeight": 150,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-0",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-1",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-2",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-3",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-4",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-4",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-5",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-6",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-7",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-8",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-9",
+      "DefWidth": 22,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-comma",
+      "DefWidth": 10,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-dot",
+      "DefWidth": 10,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "scoreentry-percent",
+      "DefWidth": 24,
+      "DefHeight": 28,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "comboburst",
+      "DefWidth": 500,
+      "DefHeight": 1536,
+      "Desc": "",
+      "Anim": true
+    },
+
+    {
+      "Name": "play-skip",
+      "DefWidth": 1000,
+      "DefHeight": 600,
+      "Desc": "",
+      "Anim": true
+    },
+
+    {
+      "Name": "star2",
+      "DefWidth": 48,
+      "DefHeight": 48,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "menu-button-background",
+      "DefWidth": 1380,
+      "DefHeight": 170,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "play-unranked",
+      "DefWidth": 512,
+      "DefHeight": 190,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "play-warningarrow",
+      "DefWidth": 128,
+      "DefHeight": 128,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "arrow-pause",
+      "DefWidth": 128,
+      "DefHeight": 128,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "arrow-warning",
+      "DefWidth": 128,
+      "DefHeight": 128,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "section-pass",
+      "DefWidth": 1536,
+      "DefHeight": 1536,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "section-fail",
+      "DefWidth": 1536,
+      "DefHeight": 1536,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "multi-skipped",
+      "DefWidth": 120,
+      "DefHeight": 60,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "masking-border",
+      "DefWidth": 1536,
+      "DefHeight": 300,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "hitcircleselect",
+      "DefWidth": 256,
+      "DefHeight": 256,
+      "Desc": "Used in editor to highlight selected notes on playfield. This SHOULD be a circle.",
+      "Anim": false
+    },
+
+    {
+      "Name": "inputoverlay-background",
+      "DefWidth": 386,
+      "DefHeight": 110,
+      "Desc": "",
+      "Anim": false
+    },
+
+    {
+      "Name": "inputoverlay-key",
+      "DefWidth": 86,
+      "DefHeight": 92,
+      "Desc": "",
+      "Anim": false
+    }
   ]
 }

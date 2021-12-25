@@ -40,6 +40,7 @@ namespace SkinMaker
             InitializeWatcher();
             InitializeComponent();
             FillOsuStdListbox();
+            FillGameplayListbox();
 
             Editing.Text = $"Editing: {skinName}";
             editorControl.Content = new EditImagesContent(skinName, this, lastSelected); 
@@ -93,13 +94,27 @@ namespace SkinMaker
                 item.Content = file.Name;
                 item.MouseEnter += new MouseEventHandler(item_MouseEnter);
                 item.Selected += new RoutedEventHandler(item_Selected);
-                osuStdListbox.Items.Add(item);
+                OsuStdFiles.Items.Add(item);
             }
         }
-        
+
+        private void FillGameplayListbox()
+        {
+            ListBoxItem item = null;
+            foreach (AddFileLoader.GameplayFilesContent file in AddFileLoader.content.GameplayFiles)
+            {
+                item = new ListBoxItem();
+                item.Content = file.Name;
+                item.MouseEnter += new MouseEventHandler(item_MouseEnter);
+                item.Selected += new RoutedEventHandler(item_Selected);
+                GameplayFiles.Items.Add(item);
+            }
+        }
+
         private void item_Selected(object sender, RoutedEventArgs e)
         {
-            AddFileLoader.CreateSelectedFile(((ListBoxItem)sender).Content.ToString(), skinName);
+            ListBoxItem item = (ListBoxItem)sender;
+            AddFileLoader.CreateSelectedFile(item.Content.ToString(), skinName, ((ListBox)item.Parent).Name.ToString());
         }
 
 
@@ -121,7 +136,9 @@ namespace SkinMaker
             
         private void item_MouseEnter(object sender, MouseEventArgs e)
         {
-            DescBox.Text = AddFileLoader.GetFileDesc(((ListBoxItem)sender).Content.ToString());
+            ListBoxItem item = (ListBoxItem)sender;
+            DescBox.Text = AddFileLoader.GetFileDesc(item.Content.ToString(), ((ListBox)item.Parent).Name.ToString());
+            MenuDescPopup.PlacementTarget = (ListBox)item.Parent;
             MenuDescPopup.IsOpen = true;
         }
 
