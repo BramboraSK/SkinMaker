@@ -55,7 +55,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Templates\" />
+    <Folder Include="Templates\Skins\" />
   </ItemGroup>
 
 </Project>

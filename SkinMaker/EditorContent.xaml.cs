@@ -105,6 +105,11 @@ namespace SkinMaker
 
         private void Remove2x_Click(object sender, RoutedEventArgs e)
         {
+            if (MessageBox.Show("Warning! This will DELETE all images with '@2x' in their name. This action can't be undone. Do you want to continue?", "", MessageBoxButton.YesNo) == MessageBoxResult.No)
+            {
+                return;
+            }
+
             foreach (string filename in Directory.EnumerateFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)))
             {
                 if (filename.Contains("@2x"))

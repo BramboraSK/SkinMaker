@@ -13,6 +13,7 @@
         <Button x:Name="FontsButton" Content="Fonts" HorizontalAlignment="Left" Margin="230,50,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="FontsButton_Click"/>
         <ContentControl Name="SectionController" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" Height="634" Width="1280"/>
         <Button x:Name="BackButton" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="1167,50,0,0" VerticalAlignment="Top" Height="36" Width="71" Click="BackButton_Click"/>
+        <Button x:Name="ManualEditButton" Content="Manual" HorizontalAlignment="Left" Margin="420,50,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="ManualEditButton_Click"/>
 
     </Grid>
 </UserControl>

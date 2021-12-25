@@ -58,5 +58,10 @@ namespace SkinMaker
         {
                 SectionController.Content = new SkinIniEditorFonts(mw, skinName);
         }
+
+        private void ManualEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            SectionController.Content = new SkinIniEditorManual(mw, skinName);
+        }
     }
 }

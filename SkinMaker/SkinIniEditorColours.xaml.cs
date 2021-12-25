@@ -56,8 +56,17 @@ namespace SkinMaker
             InitializeValues();
 
             lastSelected = null;
-
             RGBPicker.R = RGBPicker.B = RGBPicker.G = 0;
+
+            if (GetLastComboColour() > 5)
+            {
+                AddComboColourButton.Visibility = Visibility.Hidden;
+            }
+
+            if (GetLastComboColour() < 3)
+            {
+                RemoveComboColourButton.Visibility = Visibility.Hidden;
+            }
         }
 
         private void TextBox_UpdateSelected(object sender, MouseButtonEventArgs e)

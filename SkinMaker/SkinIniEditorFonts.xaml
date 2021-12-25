@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:SkinMaker"
              mc:Ignorable="d" 
              Loaded="OnLoad"
-             d:DesignHeight="634" d:DesignWidth="1280">
+             d:DesignHeight="634" d:DesignWidth="1280"
+             BorderThickness="0,1,0,0"
+             BorderBrush="#FFABADB3">
     <Grid>
         <Label Content="Hit Circle Prefix" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="29" Width="200" FontSize="20" FontFamily="Aller" FontWeight="Bold" Foreground="White" Padding="0,0,5,5"/>
         <TextBox x:Name="HitCirclePrefix" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,69,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="330" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>

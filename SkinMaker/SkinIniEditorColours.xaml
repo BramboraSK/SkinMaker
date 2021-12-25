@@ -7,7 +7,9 @@
              xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              Loaded="OnLoad"
-             d:DesignHeight="634" d:DesignWidth="1280">
+             d:DesignHeight="634" d:DesignWidth="1280"
+             BorderThickness="0,1,0,0"
+             BorderBrush="#FFABADB3">
     <Grid>
         <xctk:ColorCanvas Name="RGBPicker" SelectedColorChanged="ColorPicker_SelectedColorChanged" BorderThickness="5,5,5,5" Margin="986,69,40,319" Background="{x:Null}" FontFamily="Aller" Foreground="White" BorderBrush="#FF9E00AE" FontWeight="Normal" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" UsingAlphaChannel="False" RenderTransformOrigin="0,0" FontSize="11" />
         <TextBox x:Name="Combo1" PreviewMouseDown="TextBox_UpdateSelected" TextChanged="TextBox_TextChanged" Text="" HorizontalAlignment="Left" Margin="40,69,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="250" FontSize="20" FontFamily="Aller" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="40"/>

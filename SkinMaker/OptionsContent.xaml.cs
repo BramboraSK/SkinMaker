@@ -35,6 +35,28 @@ namespace SkinMaker
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
+            if (!CheckSaved())
+            {
+                var mb = MessageBox.Show("Options were not saved. Would you like to save them now?", "", MessageBoxButton.YesNoCancel);
+
+                switch (mb)
+                {
+                    case MessageBoxResult.Yes:
+                        OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
+                        OptionsLoader.options.ImageEditorPath = ImageEditorPath.Text;
+                        OptionsLoader.Save();
+                        break;
+
+                    case MessageBoxResult.No:
+                        break;
+                    
+                    default:
+                        return;
+                }
+            }
+            
+            
+            
             if (Directory.Exists(OptionsLoader.options.SkinsFolderPath))
             {
                 mw.contentControl.Content = new MainContent(mw);
@@ -70,6 +92,16 @@ namespace SkinMaker
             };
 
             if (dialog.ShowDialog() == CommonFileDialogResult.Ok) ImageEditorPath.Text = dialog.FileName;
+        }
+
+        private bool CheckSaved()
+        {
+            if (OptionsLoader.options.SkinsFolderPath == SkinsFolderPath.Text && OptionsLoader.options.ImageEditorPath == ImageEditorPath.Text)
+            {
+                return true;
+            }
+            
+            return false;
         }
     }
 }
