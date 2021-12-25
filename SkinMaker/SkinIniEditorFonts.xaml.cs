@@ -12,18 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Diagnostics;
 
 namespace SkinMaker
 {
     /// <summary>
-    /// Interaction logic for SkinIniEditorGeneral.xaml
+    /// Interaction logic for SkinIniEditorFonts.xaml
     /// </summary>
-    public partial class SkinIniEditorGeneral : UserControl
+    public partial class SkinIniEditorFonts : UserControl
     {
-        string skinName;
-        SkinIniEditor skinIniEditor;
         MainWindow mw;
+        SkinIniEditor skinIniEditor;
+        string skinName;
 
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
@@ -39,11 +38,11 @@ namespace SkinMaker
             }
         }
 
-        public SkinIniEditorGeneral(MainWindow recievedWindow, string skinName)
+        public SkinIniEditorFonts(MainWindow recievedWindow, string skinName)
         {
             mw = recievedWindow;
-            this.skinName = skinName;
             skinIniEditor = new SkinIniEditor();
+            this.skinName = skinName;
 
             InitializeComponent();
         }
@@ -53,38 +52,33 @@ namespace SkinMaker
             InitializeValues();
         }
 
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            skinIniEditor.SkinIniChanged(skinName, "General", ((CheckBox)sender).Name.ToString(), "1", false);
-        }
-
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            skinIniEditor.SkinIniChanged(skinName, "General", ((CheckBox)sender).Name.ToString(), "0", false);
-        }
-
-        private void TextBox_TextChanged(object sender, RoutedEventArgs e)
-        {
-            skinIniEditor.SkinIniChanged(skinName, "General", ((TextBox)sender).Name.ToString(), ((TextBox)sender).Text, false);
-        }
-
         private void InitializeValues()
         {
             foreach (var tb in FindVisualChildren<TextBox>(mw))
             {
-                tb.Text = skinIniEditor.GetIniData(skinName, "General", tb.Name.ToString(), false);
+                string value = skinIniEditor.GetIniData(skinName, "Fonts", tb.Name, true);
+                tb.Text = value;
             }
+        }
 
-            foreach (var chb in FindVisualChildren<CheckBox>(mw))
+        private void TextBox_TextChanged(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb.Name.Contains("Overlap"))
             {
-                if (skinIniEditor.GetIniData(skinName, "General", chb.Name.ToString(), false) == "1")
+                if (int.TryParse(tb.Text, out _))
                 {
-                    chb.IsChecked = true;
+                    tb.Background = Brushes.Transparent;
+                    skinIniEditor.SkinIniChanged(skinName, "Fonts", tb.Name, tb.Text, false);
                 }
                 else
                 {
-                    chb.IsChecked = false;
+                    tb.Background = Brushes.Red;
                 }
+            }
+            else
+            {
+                skinIniEditor.SkinIniChanged(skinName, "Fonts", tb.Name, tb.Text, false);
             }
         }
     }

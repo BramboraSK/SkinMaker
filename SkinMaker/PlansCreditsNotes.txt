@@ -41,9 +41,7 @@
 	Update UI
 
 
-
-
-
 // Credits
 
 Haskorion - Skinnable files docs https://docs.google.com/spreadsheets/d/1bhnV-CQRMy3Z0npQd9XSoTdkYxz0ew5e648S00qkJZ8/edit#gid=2074725196
+osu!staff - Epic skinning wiki https://osu.ppy.sh/wiki/en/Skinning

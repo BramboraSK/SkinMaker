@@ -37,24 +37,7 @@ namespace SkinMaker
             this.skinName = skinName;
             mw = recievedWindow;
 
-            watcher = new(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
-
-            watcher.NotifyFilter = NotifyFilters.Attributes
-                                 | NotifyFilters.CreationTime
-                                 | NotifyFilters.DirectoryName
-                                 | NotifyFilters.FileName
-                                 | NotifyFilters.LastWrite;
-
-            watcher.Changed += OnChanged;
-            watcher.Created += OnChanged;
-            watcher.Deleted += OnChanged;
-            watcher.Renamed += OnChanged;
-
-            watcher.Filter = "*.*";
-            watcher.IncludeSubdirectories = false;
-            watcher.EnableRaisingEvents = true;
-
-
+            InitializeWatcher();
             InitializeComponent();
             FillOsuStdListbox();
 
@@ -150,6 +133,26 @@ namespace SkinMaker
         private void Editing_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             Process.Start("explorer.exe", Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
+        }
+
+        private void InitializeWatcher()
+        {
+            watcher = new(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName));
+
+            watcher.NotifyFilter = NotifyFilters.Attributes
+                                 | NotifyFilters.CreationTime
+                                 | NotifyFilters.DirectoryName
+                                 | NotifyFilters.FileName
+                                 | NotifyFilters.LastWrite;
+
+            watcher.Changed += OnChanged;
+            watcher.Created += OnChanged;
+            watcher.Deleted += OnChanged;
+            watcher.Renamed += OnChanged;
+
+            watcher.Filter = "*.*";
+            watcher.IncludeSubdirectories = false;
+            watcher.EnableRaisingEvents = true;
         }
     }
 }

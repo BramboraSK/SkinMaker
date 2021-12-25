@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 using IniParser;
 using IniParser.Model;
 using IniParser.Parser;
@@ -15,7 +16,7 @@ namespace SkinMaker
         IniDataParser parser;
         IniData data;
         string skinName;
-        public void SkinIniChanged(string skinName, string section, string key, string value)
+        public void SkinIniChanged(string skinName, string section, string key, string value, bool remove)
         {
             this.skinName = skinName;
             parser = new IniDataParser();
@@ -30,13 +31,30 @@ namespace SkinMaker
 
             data = parser.Parse(File.ReadAllText($@"{OptionsLoader.options.SkinsFolderPath}\{skinName}\skin.ini"));
 
-            ChangeIniValue(section, key, value);
+            if (remove)
+            {
+                data[section].RemoveKey(key);
+                SaveSkinIni();
+            }
+            else
+            {
+                ChangeIniValue(section, key, value);
+            }
         }
 
         private void ChangeIniValue(string section, string key, string value)
         {
-            data[section][key] = value;
-            SaveSkinIni();
+
+            if (data[section].ContainsKey(key))
+            {
+                data[section][key] = value;
+                SaveSkinIni();
+            }
+            else
+            {
+                data[section].AddKey(key, value);
+                SaveSkinIni();
+            }
         }
 
 
@@ -85,7 +103,6 @@ namespace SkinMaker
                     data[section][key] = defaultData[section][key];
 
                     SaveSkinIni();
-
                     return data[section][key];
                 }
             }

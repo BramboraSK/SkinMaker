@@ -54,9 +54,9 @@ namespace SkinMaker
             }
         }
 
-        private void FontButton_Click(object sender, RoutedEventArgs e)
+        private void FontsButton_Click(object sender, RoutedEventArgs e)
         {
-
+                SectionController.Content = new SkinIniEditorFonts(mw, skinName);
         }
     }
 }

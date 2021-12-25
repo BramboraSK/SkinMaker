@@ -21,8 +21,6 @@ SpinnerNoBlink:0
 Combo1:255,192,0
 Combo2:0,202,0
 Combo3:18,124,255
-Combo4:242,24,57
-Combo5:0,0,0
 InputOverlayText:0,0,0
 MenuGlow:0,78,155
 SliderBall:2,170,255

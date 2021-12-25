@@ -6,10 +6,10 @@
              xmlns:local="clr-namespace:SkinMaker"
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
-    <Grid>
+    <Grid Height="720" VerticalAlignment="Bottom">
         <Button x:Name="Back" Content="Back" FontWeight="Bold" HorizontalAlignment="Left" Margin="990,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="Back_Click"/>
         <Button x:Name="Save" Content="Save" FontWeight="Bold" HorizontalAlignment="Left" Margin="750,610,0,0" VerticalAlignment="Top" Height="60" Width="225" Click="Save_Click"/>
-        <TextBox x:Name="SkinsFolderPath" HorizontalAlignment="Left" Margin="100,150,0,0" Text="path\to\your\osu!\Skins" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="SkinsFolderPath" Margin="100,0,680,510" Text="path\to\your\osu!\Skins" TextWrapping="Wrap" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center" Height="60" VerticalAlignment="Bottom"/>
         <TextBox x:Name="ImageEditorPath" HorizontalAlignment="Left" Margin="100,286,0,0" Text="path\to\your\Editing\App" TextWrapping="Wrap" VerticalAlignment="Top" Width="500" Height="60" Background="{x:Null}" BorderBrush="#FF9E00AE" Foreground="White" BorderThickness="5,5,5,5" VerticalContentAlignment="Center"/>
         <Button x:Name="BrowseSkinsFolder" Content="..." HorizontalAlignment="Left" Margin="595,150,0,0" VerticalAlignment="Top" Height="60" Width="45" Click="BrowseSkinsFolder_Click"/>
         <Button x:Name="BrowseImageEditorPath" Content="..." HorizontalAlignment="Left" Margin="595,286,0,0" VerticalAlignment="Top" Height="60" Width="45" Click="BrowseImageEditorPath_Click"/>

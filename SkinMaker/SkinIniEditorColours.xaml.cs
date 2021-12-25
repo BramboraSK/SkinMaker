@@ -68,12 +68,13 @@ namespace SkinMaker
             }
             catch
             {
+
                 return;
             }
 
-            string value = skinIniEditor.GetIniData(skinName, "Colours", lastSelected.Name, true);
+            string value = skinIniEditor.GetIniData(skinName, "Colours", lastSelected.Name, false);
 
-            if (value != null)
+            if (value != null && IsValidString(value.Split(',')))
             {
                 UpdateRGBPicker(value);
             }
@@ -93,13 +94,13 @@ namespace SkinMaker
 
         private bool IsValidString(string[] input)
         {
-            Byte smrad;
+            Byte output;
 
             if (input.Length == 3)
             {
                 foreach (string item in input)
                 {
-                    if (item == "" || !Byte.TryParse(item, out smrad))
+                    if (item == "" || !Byte.TryParse(item, out output))
                     {
                         return false;
                     }
@@ -115,13 +116,20 @@ namespace SkinMaker
         {
             if (lastSelected != null && IsValidString(lastSelected.Text.Split(',')))
             {
-                skinIniEditor.SkinIniChanged(skinName, "Colours", lastSelected.Name, lastSelected.Text);
+                skinIniEditor.SkinIniChanged(skinName, "Colours", lastSelected.Name, lastSelected.Text, false);
+                lastSelected.Background = System.Windows.Media.Brushes.Transparent;
 
                 if (lastSelected.Text != $"{RGBPicker.R},{RGBPicker.G},{RGBPicker.B}")
                 {
-                    Debug.WriteLine(lastSelected.Text);
                     UpdateRGBPicker(lastSelected.Text);
                 }
+            }
+            else
+            {
+                if (lastSelected != null)
+                {
+                    lastSelected.Background = System.Windows.Media.Brushes.Red;
+                } 
             }
         }
 
@@ -172,13 +180,140 @@ namespace SkinMaker
                 }
                 else
                 {
-                    value = value ?? skinIniEditor.GetIniData(skinName, "Colours", tb.Name, false);
-                    tb.Text = value;
-                    lastSelected = (TextBox)tb;
-                    UpdateRGBPicker(value);
+                    if (IsValidString(value.Split(',')))
+                    {
+                        value = value ?? skinIniEditor.GetIniData(skinName, "Colours", tb.Name, false);
+                        tb.Text = value;
+                        lastSelected = (TextBox)tb;
+                        UpdateRGBPicker(value);
+                        UpdateRectangle(lastSelected.Name);
+                    }
                 }
 
+                if (tb.Name.Contains("Combo") && tb.Visibility == Visibility.Visible)
+                {
+                    MoveButtons('+');
+                }
             }
+        }
+
+        private void MoveButtons(char directon)
+        {
+            int move = 90;
+
+            if (directon == '-')
+            {
+                move = -90;
+            }
+
+            AddComboColourButton.Margin = new Thickness(AddComboColourButton.Margin.Left, AddComboColourButton.Margin.Top + move, 0, 0);
+            RemoveComboColourButton.Margin = new Thickness(RemoveComboColourButton.Margin.Left, RemoveComboColourButton.Margin.Top + move, 0, 0);
+        }
+
+        private void AddComboColourButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddComboColour();
+            MoveButtons('+');
+            ComboBoxVisibility($"Combo{GetLastComboColour()}", Visibility.Visible);
+
+            lastSelected = (TextBox)FindName($"Combo{GetLastComboColour() - 1}");
+            lastSelected.Text = skinIniEditor.GetIniData(skinName, "Colours", lastSelected.Name, false); 
+
+            UpdateRGBPicker(lastSelected.Text);
+            UpdateRectangle(lastSelected.Name);
+
+            if (GetLastComboColour() > 5)
+            {
+                AddComboColourButton.Visibility = Visibility.Hidden;
+            }
+
+            if (GetLastComboColour() >= 3)
+            {
+                RemoveComboColourButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void ComboBoxVisibility(string name, Visibility visibility)
+        {
+            object obj = FindName($"{name}");
+
+            if (obj is TextBox)
+            {
+                TextBox tb = obj as TextBox;
+                tb.Visibility = visibility;
+                ComboLabelVisibility(name, visibility);
+            }
+        }
+
+        private void ComboLabelVisibility(string boxName, Visibility visibility)
+        {
+            object obj = FindName($"{boxName}Label");
+
+            if (obj is Label)
+            {
+                Label tb = obj as Label;
+                tb.Visibility = visibility;
+                ComboFrameVisibility(boxName, visibility);
+            }
+        }
+
+        private void ComboFrameVisibility(string boxName, Visibility visibility)
+        {
+            object obj = FindName($"{boxName}Frame");
+
+            if (obj is Frame)
+            {
+                Frame tb = obj as Frame;
+                tb.Visibility = visibility;
+            }
+        }
+
+        private void RemoveComboColourButton_Click(object sender, RoutedEventArgs e)
+        {
+            MoveButtons('-');
+            RemoveComboColour($"Combo{GetLastComboColour() - 1}");
+            ComboBoxVisibility($"Combo{GetLastComboColour() - 1}", Visibility.Hidden);
+
+            lastSelected = (TextBox)FindName($"Combo{GetLastComboColour() - 1}");
+            Debug.WriteLine(lastSelected.Name);
+            UpdateRGBPicker(lastSelected.Text);
+            UpdateRectangle(lastSelected.Name);
+
+            if (GetLastComboColour() < 3)
+            {
+                RemoveComboColourButton.Visibility = Visibility.Hidden;
+            }
+
+            if (GetLastComboColour() <= 5)
+            {
+                AddComboColourButton.Visibility = Visibility.Visible;
+            }
+        }
+
+        private void AddComboColour()
+        {
+            string comboName = $"Combo{GetLastComboColour()}";
+
+            skinIniEditor.SkinIniChanged(skinName, "Colours", $"{comboName}", $"{skinIniEditor.GetIniData(skinName, "Colours", comboName, false)}", false);
+        }
+
+        private void RemoveComboColour(string comboName)
+        {
+            skinIniEditor.SkinIniChanged(skinName, "Colours", $"{comboName}", "", true);
+        }
+
+        private int GetLastComboColour()
+        {
+            int count = 1;
+            foreach (var tb in FindVisualChildren<TextBox>(mw))
+            {
+                if (tb.Name.Contains("Combo") && tb.Visibility == Visibility.Visible)
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
     }
 }
