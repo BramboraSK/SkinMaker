@@ -88,7 +88,7 @@ namespace SkinMaker
         private void FillOsuStdListbox()
         {
             ListBoxItem item = null;
-            foreach (AddFileLoader.OsuStdFilesContent file in AddFileLoader.content.OsuStdFiles)
+            foreach (AddFileLoader.FilesContent file in AddFileLoader.content.OsuStdFiles)
             {
                 item = new ListBoxItem();
                 item.Content = file.Name;
@@ -101,7 +101,7 @@ namespace SkinMaker
         private void FillGameplayListbox()
         {
             ListBoxItem item = null;
-            foreach (AddFileLoader.GameplayFilesContent file in AddFileLoader.content.GameplayFiles)
+            foreach (AddFileLoader.FilesContent file in AddFileLoader.content.GameplayFiles)
             {
                 item = new ListBoxItem();
                 item.Content = file.Name;

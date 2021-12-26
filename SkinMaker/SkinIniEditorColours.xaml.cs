@@ -178,31 +178,62 @@ namespace SkinMaker
 
         private void InitializeValues()
         {
+            int visibleCombos = 5;
+
             foreach (var tb in FindVisualChildren<TextBox>(mw))
             {
                 string value = skinIniEditor.GetIniData(skinName, "Colours", tb.Name, true);
 
-                if (value == null && tb.Name != "Combo1")
+                if (tb.Name.Contains("PART"))
+                {
+                    continue;
+                }
+
+                if (value == null && tb.Name != "Combo1" && tb.Name.Contains("Combo"))
                 {
                     tb.Visibility = Visibility.Hidden;
                     HideTextBoxLabel(tb.Name);
+                    visibleCombos--;
+                    continue;
                 }
-                else
+
+                if (value != null)
                 {
                     if (IsValidString(value.Split(',')))
                     {
-                        value = value ?? skinIniEditor.GetIniData(skinName, "Colours", tb.Name, false);
                         tb.Text = value;
                         lastSelected = (TextBox)tb;
                         UpdateRGBPicker(value);
                         UpdateRectangle(lastSelected.Name);
                     }
+                    else
+                    {
+                        value = skinIniEditor.GetIniData(skinName, "Colours", tb.Name, false);
+                        tb.Text = value;
+                        lastSelected = (TextBox)tb;
+                        UpdateRGBPicker(value);
+                        UpdateRectangle(lastSelected.Name);
+                    }
+                        
                 }
-
-                if (tb.Name.Contains("Combo") && tb.Visibility == Visibility.Visible)
+                else
                 {
-                    MoveButtons('+');
+                    value = skinIniEditor.GetIniData(skinName, "Colours", tb.Name, false);
+                    tb.Text = value;
+                    lastSelected = (TextBox)tb;
+                    UpdateRGBPicker(value);
+                    UpdateRectangle(lastSelected.Name);
                 }
+            }
+
+            InitButtonMove(visibleCombos);
+        }
+
+        private void InitButtonMove(int i)
+        {
+            for (int j = i; j > 0; j--)
+            {
+                MoveButtons('+');
             }
         }
 
@@ -284,7 +315,6 @@ namespace SkinMaker
             ComboBoxVisibility($"Combo{GetLastComboColour() - 1}", Visibility.Hidden);
 
             lastSelected = (TextBox)FindName($"Combo{GetLastComboColour() - 1}");
-            Debug.WriteLine(lastSelected.Name);
             UpdateRGBPicker(lastSelected.Text);
             UpdateRectangle(lastSelected.Name);
 
