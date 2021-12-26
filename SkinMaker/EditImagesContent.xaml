@@ -23,7 +23,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="EditButon" Content="Edit!" HorizontalAlignment="Left" Margin="885,490,0,0" VerticalAlignment="Top" Height="50" Width="159" Click="EditButon_Click" FontWeight="Bold"/>
+        <Button x:Name="EditButon" Content="Edit!" HorizontalAlignment="Left" Margin="885,490,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="EditButon_Click" FontWeight="Bold"/>
     </Grid>
 
 </UserControl>

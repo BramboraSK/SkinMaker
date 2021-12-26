@@ -93,8 +93,8 @@ namespace SkinMaker
         }
 
         private void UpdateRGBPicker(string value)
-        {
-            string[] RGBField = value.Split(',');
+        {  
+            string[] RGBField = value.Split("/")[0].Trim().Split(',');
 
                 RGBPicker.R = Byte.Parse(RGBField[0]);
                 RGBPicker.G = Byte.Parse(RGBField[1]);

@@ -6,11 +6,9 @@
              xmlns:local="clr-namespace:SkinMaker"
              mc:Ignorable="d" 
              Loaded="OnLoad"
-             d:DesignHeight="634" d:DesignWidth="1280"
-             BorderThickness="0,1,0,0"
-             BorderBrush="#FFABADB3">
+             d:DesignHeight="594" d:DesignWidth="1280">
     <Grid>
-        <TextBox x:Name="EditorTextBox" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged" TextWrapping="NoWrap" Text="" VerticalAlignment="Center" Height="554" Width="1200" Foreground="White" Background="{x:Null}"/>
+        <TextBox x:Name="EditorTextBox" HorizontalAlignment="Center" TextChanged="TextBox_TextChanged" TextWrapping="NoWrap" Text="" VerticalAlignment="Center" Height="514" Width="1200" Foreground="White" Background="{x:Null}" Padding="5,5,5,5"/>
 
     </Grid>
 </UserControl>

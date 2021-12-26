@@ -12,6 +12,7 @@ namespace SkinMaker
     {
         public class OptionsFile
         {
+            public string OsuFolderPath { get; set; }
             public string SkinsFolderPath { get; set; }
             public string ImageEditorPath { get; set; }
         }

@@ -14,9 +14,9 @@
         <Rectangle HorizontalAlignment="Left" Height="570" Margin="200,150,0,0" VerticalAlignment="Top" Width="1080" Fill="#FF282828"/>
         <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,20,0,0" MouseDown="Editing_MouseLeftButtonDown" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Foreground="White"/>
         <ContentControl x:Name="editorControl" Margin="200,150,0,0"/>
-        <Button x:Name="Convert2x" FontWeight="Bold" Content="Convert @2x to low res" HorizontalAlignment="Left" Margin="1030,90,0,0" VerticalAlignment="Top" Height="50" Width="240" Click="Convert2x_Click"/>
-        <Button x:Name="Remove2x" FontWeight="Bold" Content="Remove @2x" HorizontalAlignment="Left" Margin="870,90,0,0" VerticalAlignment="Top" Height="50" Width="150" Click="Remove2x_Click"/>
-        <Button x:Name="BackToMenu" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="42,648,0,0" VerticalAlignment="Top" Height="41" Width="100" Click="BackToMenu_Click"/>
+        <Button x:Name="Convert2x" FontWeight="Bold" Content="Convert @2x" HorizontalAlignment="Left" Margin="20,151,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="Convert2x_Click"/>
+        <Button x:Name="Remove2x" FontWeight="Bold" Content="Remove @2x" HorizontalAlignment="Left" Margin="20,221,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="Remove2x_Click"/>
+        <Button x:Name="BackToMenu" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="20,650,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="BackToMenu_Click"/>
         <Menu Margin="200,120,990,0" Background="#FF282828" Foreground="White" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" VerticalAlignment="Top">
             <MenuItem Header="Add File" Foreground="White" Width="86">
                 <MenuItem Margin="0,0,0,0" Foreground="Black" Header="osu!std" Name="OsuStdMenu">
@@ -34,7 +34,9 @@
                 </Popup>
             </Canvas>
         </StackPanel>
-        <Button x:Name="SkinIniEditorButton" Content="Skin.ini" HorizontalAlignment="Left" Margin="42,583,0,0" VerticalAlignment="Top" Width="100" Height="41" Click="SkinIniEditorButton_Click" FontWeight="Bold"/>
+        <Button x:Name="SkinIniEditorButton" Content="Skin.ini" HorizontalAlignment="Left" Margin="20,291,0,0" VerticalAlignment="Top" Width="160" Height="50" Click="SkinIniEditorButton_Click" FontWeight="Bold"/>
+        <Button x:Name="ExportOskButton" Content="Export .osk" HorizontalAlignment="Left" Margin="1100,80,0,0" VerticalAlignment="Top" Height="50" Width="160" FontWeight="Bold" Click="ExportOskButton_Click"/>
+        <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Background="#FF282828" Foreground="Gray" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" Margin="540,117,0,0" TextWrapping="Wrap" PreviewMouseDown="SearchTextBox_MouseDown" TextChanged="SearchTextBox_TextChanged" LostFocus="SearchTextBox_LostFocus" Text="Search..." VerticalAlignment="Top" Width="200" Height="33" VerticalContentAlignment="Center"/>
 
     </Grid>
 </UserControl>

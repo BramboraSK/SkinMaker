@@ -176,5 +176,38 @@ namespace SkinMaker
             watcher.IncludeSubdirectories = false;
             watcher.EnableRaisingEvents = true;
         }
+
+        private void ExportOskButton_Click(object sender, RoutedEventArgs e)
+        {
+            SkinExport.ExportOsk(skinName);
+        }
+
+        private void SearchTextBox_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            SearchTextBox.Foreground = System.Windows.Media.Brushes.White;
+
+            if (SearchTextBox.Text.Contains("Search"))
+            {
+                SearchTextBox.Text = "";
+            }
+
+        }
+
+        private void SearchTextBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (SearchTextBox.Text == "" || SearchTextBox.Text.Contains("Search"))
+            {
+                SearchTextBox.Foreground = System.Windows.Media.Brushes.Gray;
+                SearchTextBox.Text = "Search...";
+            }
+        }
+
+        private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (SearchTextBox.Text != "Search...")
+            {
+                editorControl.Content = new EditImagesContent(skinName, this, lastSelected, SearchTextBox.Text);
+            }
+        }
     }
 }

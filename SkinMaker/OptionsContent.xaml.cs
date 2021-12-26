@@ -29,8 +29,10 @@ namespace SkinMaker
         {
             mw = recievedWindow;
             InitializeComponent();
+
             SkinsFolderPath.Text = OptionsLoader.options.SkinsFolderPath;
             ImageEditorPath.Text = OptionsLoader.options.ImageEditorPath;
+            OsuFolderPath.Text = OptionsLoader.options.OsuFolderPath;
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -42,21 +44,17 @@ namespace SkinMaker
                 switch (mb)
                 {
                     case MessageBoxResult.Yes:
-                        OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
-                        OptionsLoader.options.ImageEditorPath = ImageEditorPath.Text;
-                        OptionsLoader.Save();
+                        if(!SaveOptions()) return;
                         break;
 
                     case MessageBoxResult.No:
                         break;
-                    
+
                     default:
                         return;
                 }
             }
-            
-            
-            
+
             if (Directory.Exists(OptionsLoader.options.SkinsFolderPath))
             {
                 mw.contentControl.Content = new MainContent(mw);
@@ -74,14 +72,54 @@ namespace SkinMaker
                 IsFolderPicker = true
             };
 
-            if(dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok) SkinsFolderPath.Text = dialog.FileName;
         }
 
         private void Save_Click(object sender, RoutedEventArgs e)
         {
-            OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
-            OptionsLoader.options.ImageEditorPath = ImageEditorPath.Text;
-            OptionsLoader.Save();
+            SaveOptions();
+        }
+
+        private bool SaveOptions()
+        {
+            if (CheckOsuExe() && CheckEditorExe())
+            {
+                OptionsLoader.options.OsuFolderPath = OsuFolderPath.Text;
+                OptionsLoader.options.SkinsFolderPath = SkinsFolderPath.Text;
+                OptionsLoader.options.ImageEditorPath = ImageEditorPath.Text;
+                OptionsLoader.Save();
+                return true;
+            }
+            else
+            {
+                if (!CheckOsuExe())
+                {
+                    OsuFolderPath.Background = Brushes.Red;
+                }
+
+                if (!CheckEditorExe())
+                {
+                    ImageEditorPath.Background = Brushes.Red;
+                }
+
+                return false;
+            }
+            
+        }
+
+        private bool CheckOsuExe()
+        {
+            return File.Exists(System.IO.Path.Join(OsuFolderPath.Text, "osu!.exe"));
+        }
+
+        private bool CheckEditorExe()
+        {
+            if (ImageEditorPath.Text.EndsWith(".exe"))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         private void BrowseImageEditorPath_Click(object sender, RoutedEventArgs e)
@@ -96,12 +134,36 @@ namespace SkinMaker
 
         private bool CheckSaved()
         {
-            if (OptionsLoader.options.SkinsFolderPath == SkinsFolderPath.Text && OptionsLoader.options.ImageEditorPath == ImageEditorPath.Text)
+            if (OptionsLoader.options.SkinsFolderPath == SkinsFolderPath.Text && OptionsLoader.options.ImageEditorPath == ImageEditorPath.Text && OptionsLoader.options.OsuFolderPath == OsuFolderPath.Text)
             {
                 return true;
             }
             
             return false;
+        }
+
+        private void BrowseOsuPath_Click(object sender, RoutedEventArgs e)
+        {
+            CommonOpenFileDialog dialog = new()
+            {
+                IsFolderPicker = true
+            };
+
+            if (dialog.ShowDialog() == CommonFileDialogResult.Ok)
+            {
+                OsuFolderPath.Text = dialog.FileName;
+            }   
+        }
+
+        private void OsuFolderPath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            OsuFolderPath.Background = Brushes.Transparent;
+            SkinsFolderPath.Text = System.IO.Path.Join(OsuFolderPath.Text, "Skins");
+        }
+
+        private void ImageEditorPath_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ImageEditorPath.Background = Brushes.Transparent;
         }
     }
 }

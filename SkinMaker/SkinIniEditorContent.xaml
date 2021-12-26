@@ -7,13 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="720" d:DesignWidth="1280">
     <Grid>
-        <Button x:Name="GeneralButton" Content="General" HorizontalAlignment="Left" Margin="40,50,0,0" VerticalAlignment="Top" Height="36" Width="90" FontFamily="Aller" FontSize="20" FontWeight="Bold" Click="GeneralButton_Click"/>
-        <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="1150" Foreground="White"/>
-        <Button x:Name="ColoursButton" Content="Colours" HorizontalAlignment="Left" Margin="135,50,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.551" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="ColoursButton_Click"/>
-        <Button x:Name="FontsButton" Content="Fonts" HorizontalAlignment="Left" Margin="230,50,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="FontsButton_Click"/>
-        <ContentControl Name="SectionController" HorizontalAlignment="Center" Margin="0,86,0,0" VerticalAlignment="Top" Height="634" Width="1280"/>
-        <Button x:Name="BackButton" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="1167,50,0,0" VerticalAlignment="Top" Height="36" Width="71" Click="BackButton_Click"/>
-        <Button x:Name="ManualEditButton" Content="Manual" HorizontalAlignment="Left" Margin="420,50,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="ManualEditButton_Click"/>
+        <Button x:Name="GeneralButton" Content="General" HorizontalAlignment="Left" Margin="40,90,0,0" VerticalAlignment="Top" Height="36" Width="90" FontFamily="Aller" FontSize="20" FontWeight="Bold" Click="GeneralButton_Click"/>
+        <TextBlock x:Name="Editing" HorizontalAlignment="Left" Margin="10,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="1150" Foreground="White"/>
+        <Button x:Name="ColoursButton" Content="Colours" HorizontalAlignment="Left" Margin="135,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,0.551" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="ColoursButton_Click"/>
+        <Button x:Name="FontsButton" Content="Fonts" HorizontalAlignment="Left" Margin="230,90,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="FontsButton_Click"/>
+        <Rectangle Fill="#FF282828" Margin="0,126,0,0"/>
+        <ContentControl Name="SectionController" HorizontalAlignment="Center" Margin="0,126,0,0" VerticalAlignment="Top" Height="594" Width="1280"/>
+        <Button x:Name="BackButton" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="1167,90,0,0" VerticalAlignment="Top" Height="36" Width="71" Click="BackButton_Click"/>
+        <Button x:Name="ManualEditButton" Content="Manual" HorizontalAlignment="Left" Margin="420,90,0,0" VerticalAlignment="Top" Height="36" FontSize="20" FontFamily="Aller" FontWeight="Bold" Width="90" Click="ManualEditButton_Click"/>
 
     </Grid>
 </UserControl>

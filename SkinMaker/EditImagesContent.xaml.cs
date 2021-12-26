@@ -15,9 +15,11 @@ namespace SkinMaker
     {
         string skinName;
         EditorContent ec;
+        string filter;
 
-        public EditImagesContent(string skinName, EditorContent ec, string lastSelected)
+        public EditImagesContent(string skinName, EditorContent ec, string lastSelected, string filter = null)
         {
+            this.filter = filter;
             this.ec = ec;
             this.skinName = skinName;
             InitializeComponent();
@@ -33,7 +35,14 @@ namespace SkinMaker
         {
             foreach (string filename in Directory.GetFiles(Path.Join(OptionsLoader.options.SkinsFolderPath, skinName)).Where(filename => filename.EndsWith(".png") || filename.EndsWith(".jpg")))
             {
-                ImageList.Items.Add(Path.GetFileName(filename));
+                if (filter != null)
+                {
+                    if(filename.Contains(filter)) ImageList.Items.Add(Path.GetFileName(filename));
+                }
+                else
+                {
+                    ImageList.Items.Add(Path.GetFileName(filename));
+                }
             }
         }
 
