@@ -9,10 +9,10 @@ namespace SkinMaker
 {
     public class EditImages
     {
-        public static string[] GetImageDim(string path)
+        public static int[] GetImageDim(string path)
         {
             using Bitmap img = new(path);
-            string[] dim = { img.Width.ToString(), img.Height.ToString() };
+            int[] dim = { img.Width, img.Height };
             img.Dispose();
             return dim;
         }

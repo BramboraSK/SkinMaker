@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ using System.IO;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace SkinMaker
 {
@@ -54,9 +56,17 @@ namespace SkinMaker
 
         public static MenuContentFile content = JsonSerializer.Deserialize<MenuContentFile>(File.ReadAllText(menuContentFilename));
 
-        public static string GetFileDesc(string file, string parent)
+        public static string GetFileDesc(string file, string parent = null)
         {
+            if (parent != null)
+            {
                 return ((List<FilesContent>)content[parent]).Find(e => e.Name == file).Desc;
+            }
+            else
+            {
+                return SearchFileDesc(file);
+            }
+
         }
 
         public static void CreateSelectedFile(string file, string skinName, string parent)
@@ -74,6 +84,28 @@ namespace SkinMaker
                 }
                 image.Save(@$"{OptionsLoader.options.SkinsFolderPath}\{skinName}\{file}@2x.png", ImageFormat.Png);
             }
+        }
+
+        private static string SearchFileDesc(string file)
+        {
+            foreach (PropertyInfo property in content.GetType().GetProperties())
+            {
+                if (property.PropertyType != typeof(List<FilesContent>)) continue;
+
+                List<FilesContent> list = (List<FilesContent>)content[property.Name];
+
+                if (list.Any(item => item.Name == file))
+                {
+                    return list.Find(e => e.Name == file).Desc;
+                }
+                else
+                {
+                    continue;
+                }
+
+            }
+
+            return "No description available.";
         }
     }
 }

@@ -9,11 +9,11 @@
 
     <Grid>
         <ListBox x:Name="ImageList" ScrollViewer.VerticalScrollBarVisibility="Hidden" Background="{x:Null}" Foreground="White" Margin="0,0,540,0" SelectionChanged="ImageList_SelectionChanged"/>
-        <Border BorderThickness="2" Margin="600,60,296,326" BorderBrush="#FF121212" Background="#FF282828">
-            <Image x:Name="Preview" HorizontalAlignment="Left" Height="180" Margin="0,0,0,0" VerticalAlignment="Top" Width="180" Stretch="Uniform"/>
+        <Border x:Name="PreviewBorder" BorderThickness="2" MaxHeight="180" MaxWidth="180" Margin="600,60,0,0" BorderBrush="#FF121212" Background="#FF282828" Height="180" VerticalAlignment="Top" HorizontalAlignment="Left" Width="180">
+            <Image x:Name="Preview" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Stretch="Fill"/>
         </Border>
-        <Label x:Name="PreviewWidth" Content="" HorizontalAlignment="Left" Margin="600,23,0,0" VerticalAlignment="Top" Width="184" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="PreviewHeight" Content="" HorizontalAlignment="Left" Margin="489,134,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="180" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+        <Label x:Name="PreviewWidth" Content="" Margin="600,25,0,0" Width="180" Height="35" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="PreviewHeight" Content="" HorizontalAlignment="Left" Margin="489,132,0,0" RenderTransformOrigin="0.5,0.5" Width="180" Height="35" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" VerticalAlignment="Top">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -23,7 +23,8 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="EditButon" Content="Edit!" HorizontalAlignment="Left" Margin="885,490,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="EditButon_Click" FontWeight="Bold"/>
+        <Button x:Name="EditButon" Content="Edit!" HorizontalAlignment="Left" Margin="900,500,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="EditButon_Click" FontWeight="Bold"/>
+        <TextBox x:Name="DescBox" Focusable="False" BorderThickness="2" BorderBrush="#FF121212" HorizontalAlignment="Left" Margin="600,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="460" Height="220" Background="#FF282828"/>
     </Grid>
 
 </UserControl>

@@ -140,6 +140,30 @@ namespace SkinMaker
             DescBox.Text = AddFileLoader.GetFileDesc(item.Content.ToString(), ((ListBox)item.Parent).Name.ToString());
             MenuDescPopup.PlacementTarget = (ListBox)item.Parent;
             MenuDescPopup.IsOpen = true;
+
+            UpdatePreviewImage(item);
+        }
+
+        private void UpdatePreviewImage(ListBoxItem item)
+        {
+            string imgSource = Path.Join("Templates", "Skins", "osu!Default", item.Content.ToString() + ".png");
+
+            BitmapImage bmi = new();
+            bmi.BeginInit();
+
+            if (!File.Exists(imgSource))
+            {
+                bmi.UriSource = null;
+                PreviewImage.Source = bmi;
+                return;
+            }
+
+            bmi.CreateOptions = BitmapCreateOptions.IgnoreImageCache;
+            bmi.CacheOption = BitmapCacheOption.OnLoad;
+            bmi.UriSource = new Uri(imgSource, UriKind.Relative);
+            bmi.EndInit();
+                
+            PreviewImage.Source = bmi;
         }
 
         private void osuStdListbox_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)

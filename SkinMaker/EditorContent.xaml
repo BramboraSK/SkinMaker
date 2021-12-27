@@ -18,22 +18,23 @@
         <Button x:Name="Remove2x" FontWeight="Bold" Content="Remove @2x" HorizontalAlignment="Left" Margin="20,221,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="Remove2x_Click"/>
         <Button x:Name="BackToMenu" FontWeight="Bold" Content="Back" HorizontalAlignment="Left" Margin="20,650,0,0" VerticalAlignment="Top" Height="50" Width="160" Click="BackToMenu_Click"/>
         <Menu Margin="200,120,990,0" Background="#FF282828" Foreground="White" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" VerticalAlignment="Top">
-            <MenuItem Header="Add File" Foreground="White" Width="86">
-                <MenuItem Margin="0,0,0,0" Foreground="Black" Header="osu!std" Name="OsuStdMenu">
-                    <ListBox Margin="-40,0,-50,0" IsVisibleChanged="osuStdListbox_IsVisibleChanged" Name="OsuStdFiles" MaxHeight="300" Width="400"/>
+            <MenuItem Header="Add File"  Foreground="White" Width="86">
+                <MenuItem Margin="0,0,0,0" Padding="0,0,0,0" Foreground="Black" Header="osu!std" Name="OsuStdMenu">
+                    <ListBox Margin="-40,0,-50,0"  IsVisibleChanged="osuStdListbox_IsVisibleChanged" Name="OsuStdFiles" MaxHeight="300" Width="400"/>
                 </MenuItem>
-                <MenuItem Margin="0,0,0,0" Foreground="Black" Header="Gameplay" Name="GameplayMenu">
+                <MenuItem Margin="0,0,0,0" Padding="0,0,0,0"  Foreground="Black" Header="Gameplay" Name="GameplayMenu">
                     <ListBox Margin="-40,0,-50,0" Name="GameplayFiles" MaxHeight="300" Width="400"/>
                 </MenuItem>
             </MenuItem>
         </Menu>
-        <StackPanel Margin="740,246,140,360">
-            <Canvas>
-                <Popup Name="MenuDescPopup" PlacementTarget="{Binding ElementName=OsuStdFiles}" VerticalOffset="-3" HorizontalOffset="10" Placement="Left" Width="400" Height="306">
-                    <TextBox Name="DescBox" Width="400" Height="306" TextWrapping="Wrap" MaxWidth="400" Visibility="Visible" Background="White"/>
-                </Popup>
-            </Canvas>
-        </StackPanel>
+        <Popup Name="MenuDescPopup" PlacementTarget="{Binding ElementName=OsuStdFiles}" VerticalOffset="-3" HorizontalOffset="10" Placement="Left" Width="400">
+            <Border x:Name="PreviewImageBorder" BorderBrush="Black" BorderThickness="2,2,2,2">
+                <StackPanel x:Name="DescStackPanel" Background="Gray">
+                    <TextBox Name="DescBox" Background="Gray" BorderThickness="0,0,0,0" Width="400" TextWrapping="Wrap" Visibility="Visible"/>
+                    <Image x:Name="PreviewImage" Margin="0,10,0,0" MaxWidth="400" MaxHeight="150"/>
+                </StackPanel>
+            </Border>
+        </Popup>
         <Button x:Name="SkinIniEditorButton" Content="Skin.ini" HorizontalAlignment="Left" Margin="20,291,0,0" VerticalAlignment="Top" Width="160" Height="50" Click="SkinIniEditorButton_Click" FontWeight="Bold"/>
         <Button x:Name="ExportOskButton" Content="Export .osk" HorizontalAlignment="Left" Margin="1100,80,0,0" VerticalAlignment="Top" Height="50" Width="160" FontWeight="Bold" Click="ExportOskButton_Click"/>
         <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Background="#FF282828" Foreground="Gray" BorderBrush="Black" BorderThickness="2" FontFamily="Aller" FontSize="20" Margin="540,117,0,0" TextWrapping="Wrap" PreviewMouseDown="SearchTextBox_MouseDown" TextChanged="SearchTextBox_TextChanged" LostFocus="SearchTextBox_LostFocus" Text="Search..." VerticalAlignment="Top" Width="200" Height="33" VerticalContentAlignment="Center"/>
